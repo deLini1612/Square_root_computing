@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/I2C 2024/A2HW/SoC/avalon_accel/dma-validation-sim
+Esquare_root
+w1732545173
+Z0 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dD:/I2C 2024/ADE/Miniproject/Square_root_computing
+8D:/I2C 2024/ADE/Miniproject/Square_root_computing/square_root_e.vhd
+FD:/I2C 2024/ADE/Miniproject/Square_root_computing/square_root_e.vhd
+l0
+L5
+VhoU=NBDF3?8MbSN<N<kNz1
+!s100 IW:=?haiHEegTd]z4V3Z61
+Z4 OV;C;10.5b;63
+32
+!s110 1732545184
+!i10b 1
+!s108 1732545184.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/I2C 2024/ADE/Miniproject/Square_root_computing/square_root_e.vhd|
+!s107 D:/I2C 2024/ADE/Miniproject/Square_root_computing/square_root_e.vhd|
+!i113 1
+Z5 o-work work -2002 -explicit
+Z6 tExplicit 1 CvgOpt 0
+Aa1
+w1732546566
+R0
+R1
+R2
+Z7 DEx4 work 11 square_root 0 22 hoU=NBDF3?8MbSN<N<kNz1
+Z8 8D:/I2C 2024/ADE/Miniproject/Square_root_computing/square_root_a1.vhd
+Z9 FD:/I2C 2024/ADE/Miniproject/Square_root_computing/square_root_a1.vhd
+l6
+L1
+V=V:5k>]ma`4JObPfzSTNn0
+!s100 n<Lo?hDV[oZMiea:XP2WV2
+R4
+32
+!s110 1732546573
+!i10b 1
+!s108 1732546573.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/I2C 2024/ADE/Miniproject/Square_root_computing/square_root_a1.vhd|
+!s107 D:/I2C 2024/ADE/Miniproject/Square_root_computing/square_root_a1.vhd|
+!i113 1
+R5
+R6

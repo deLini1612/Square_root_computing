@@ -1,4 +1,4 @@
-architecture a1 of square_root is
+architecture a1_2 of square_root is
     type statetype is (IDLE, INIT, COMP, DONE);
     signal state : statetype;
     signal over     : std_logic;
@@ -33,7 +33,7 @@ architecture a1 of square_root is
                         if(over = '1') then
                             state <= DONE;
                         else
-                            next_x := x/2 + unsigned(A)/(2*x);
+                            next_x := (3*x-unsigned(A)*(x**3))/2;
                             if (x = next_x) then
                                 over <= '1';
                             end if;                        
@@ -42,12 +42,12 @@ architecture a1 of square_root is
                     
                     when DONE =>
                         finished <= '1';
-                        result <= std_logic_vector(x);
+                        result <= std_logic_vector(x*unsigned(A));
                         if(start = '0') then
                             state <= IDLE;
                         end if;
                     end case;
                 end if;
         end process;
-end architecture a1 ;
+end architecture a1_2 ;
     
