@@ -18,32 +18,30 @@ architecture a1 of square_root is
                 case state is
                     
                     when IDLE =>
-                        finished <= '0';
                         over <= '0';
                         if(start = '1') then
                             state <= INIT;
                         end if;
 
                     when INIT =>
-                        x := to_unsigned(((2**(n)) - 1),n);
+                        x := (n-1 => '1', others => '0');
                         next_x := to_unsigned(0,n);
                         state <= COMP;
                     
                     when COMP =>
-                        if(over = '1') then
-                            state <= DONE;
-                        else
-                            next_x := x/2 + unsigned(A)/(2*x);
-                            if (x = next_x) then
+                            --next_x := x/2 + unsigned(A)/(2*x);
+                            next_x := (x + resize(unsigned(A)/x,n))/2;
+                            if (x = next_x or next_x = 0) then
                                 over <= '1';
+                                state <= DONE;
                             end if;                        
                             x := next_x;
-                        end if;                        
                     
                     when DONE =>
                         finished <= '1';
                         result <= std_logic_vector(x);
                         if(start = '0') then
+                            finished <= '0';
                             state <= IDLE;
                         end if;
                     end case;

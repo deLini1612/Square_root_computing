@@ -1,10 +1,17 @@
-library ieee;
-use ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.ALL;
+
 
 entity tb_square_root is
 end entity tb_square_root;
 
 architecture sequence of tb_square_root is
+
+    constant PERIOD : TIME      := 10 NS;
+    constant n      : integer   := 32;
+    signal StopSim  : BOOLEAN   := False;
+
 
     signal clk          : std_logic                         := '1';
     signal reset        : std_logic                         := '0';
@@ -13,16 +20,13 @@ architecture sequence of tb_square_root is
     signal A            : std_logic_vector(2*n-1 downto 0);
     signal result       : std_logic_vector(n-1 downto 0);
 
-    constant PERIOD : TIME      := 10 NS;
-    signal StopSim  : BOOLEAN   := False;
-
 begin
 
     UUT :   entity work.square_root(a1)
             port map (
                 clk         =>  clk,
                 reset       =>  reset,
-                start       =>  c,
+                start       =>  start,
                 A           =>  A,
                 result      =>  result,
                 finished    =>  finished);
@@ -51,36 +55,38 @@ begin
             variable rand_seed : integer := 1612; -- Seed for random number generator
             variable rand_val  : unsigned(2*n-1 downto 0);
         begin
-            wait until reset = '0' and clk = '1' and clk'event;
+            wait until reset = '1' and clk = '1' and clk'event;
 
             -- Direct test: required test 0, 1, 512, 5499030, 1194877489
             start <= '1';
-            A <= std_logic_vector(0);
+            A <= std_logic_vector(to_unsigned(0,A'length));
 
             wait until finished = '1' and clk = '1' and clk'event;
             start <= '0';
             wait until clk = '1' and clk'event;
             start <= '1';
-            A <= std_logic_vector(1);
+            A <= std_logic_vector(to_unsigned(1,A'length));
 
             wait until finished = '1' and clk = '1' and clk'event;
             start <= '0';
             wait until clk = '1' and clk'event;
             start <= '1';
-            A <= std_logic_vector(512);
+            A <= std_logic_vector(to_unsigned(512,A'length));
 
             wait until finished = '1' and clk = '1' and clk'event;
             start <= '0';
             wait until clk = '1' and clk'event;
             start <= '1';
-            A <= std_logic_vector(5499030);
+            A <= std_logic_vector(to_unsigned(5499030,A'length));
 
             wait until finished = '1' and clk = '1' and clk'event;
             start <= '0';
             wait until clk = '1' and clk'event;
             start <= '1';
-            A <= std_logic_vector(1194877489);
+            A <= std_logic_vector(to_unsigned(1194877489,A'length));
 
+            wait until finished = '1' and clk = '1' and clk'event;
+            start <= '0';
             StopSim <= True;
             wait;
         end process Sim;
