@@ -8,9 +8,10 @@ end entity tb_square_root;
 
 architecture sequence of tb_square_root is
 
-    constant PERIOD : TIME      := 10 NS;
-    constant n      : integer   := 32;
-    signal StopSim  : BOOLEAN   := False;
+    constant PERIOD     : TIME      := 10 NS;
+    constant n          : integer   := 32;
+    constant NUM_TEST   : integer   := 1000;
+    signal StopSim      : BOOLEAN   := False;
 
 
     signal clk          : std_logic                         := '1';
@@ -54,6 +55,7 @@ begin
     Sim: process
             variable rand_seed : integer := 1612; -- Seed for random number generator
             variable rand_val  : unsigned(2*n-1 downto 0);
+            variable test_count : integer := 5; -- Because of 5 direct test
         begin
             wait until reset = '1' and clk = '1' and clk'event;
 
@@ -87,6 +89,19 @@ begin
 
             wait until finished = '1' and clk = '1' and clk'event;
             start <= '0';
+
+            -- Random test
+            while test_count < NUM_TEST loop
+                rand_val := uniform(rand_seed, rand_seed) mod (2**(2*n));
+                wait until clk = '1' and clk'event;
+                start <= '1';
+                A <= std_logic_vector(rand_val);
+                wait until finished = '1' and clk = '1' and clk'event;
+                start <= '0';
+                test_count := test_count + 1;
+            end loop;
+
+            -- End Sim
             StopSim <= True;
             wait;
         end process Sim;

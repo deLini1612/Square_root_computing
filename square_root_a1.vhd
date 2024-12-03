@@ -47,5 +47,5 @@ architecture a1 of square_root is
                     end case;
                 end if;
         end process;
-end architecture a1 ;
+end architecture a1;
     
