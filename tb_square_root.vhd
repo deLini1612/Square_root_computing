@@ -1,6 +1,7 @@
 library IEEE;
-use IEEE.std_logic_1164.all;
+use IEEE.std_logic_1164.ALL;
 use IEEE.numeric_std.ALL;
+use IEEE.math_real.ALL;
 
 
 entity tb_square_root is
@@ -53,9 +54,12 @@ begin
         end process ResetGen;
 
     Sim: process
-            variable rand_seed : integer := 1612; -- Seed for random number generator
-            variable rand_val  : unsigned(2*n-1 downto 0);
-            variable test_count : integer := 5; -- Because of 5 direct test
+            variable rand_seed          : integer := 1612; -- Seed for random number generator
+            variable rand_val_vector    : std_logic_vector(2*n-1 downto 0);
+            variable rand_bit           : real;
+            variable test_count         : integer := 5; -- Because of 5 direct test
+            variable error_count        : integer := 0;
+            variable golden_out         : unsigned(n-1 downto 0);
         begin
             wait until reset = '1' and clk = '1' and clk'event;
 
@@ -92,14 +96,34 @@ begin
 
             -- Random test
             while test_count < NUM_TEST loop
-                rand_val := uniform(rand_seed, rand_seed) mod (2**(2*n));
+                -- Generate random input
+                for i in rand_val_vector'range loop
+                    uniform(rand_seed, rand_seed, rand_bit);
+                    rand_val_vector(i) := '1' when rand_bit > 0.5 else '0';
+                end loop;
+                
                 wait until clk = '1' and clk'event;
                 start <= '1';
-                A <= std_logic_vector(rand_val);
+                A <= rand_val_vector;
                 wait until finished = '1' and clk = '1' and clk'event;
+
+                -- Compute golden output and compare
+                golden_out := to_unsigned(integer(sqrt(real(to_integer(unsigned(rand_val_vector))))), golden_out'length); 
+                if unsigned(result) /= golden_out then
+                    error_count := error_count + 1;
+                    report "Mismatch in random test #" & integer'image(test_count) &
+                        ": A=" & to_hstring(rand_val_vector) &
+                        ", DUT=" & integer'image(to_integer(unsigned(result))) &
+                        ", Expected=" & integer'image(to_integer(golden_out)) severity error;
+                end if;
+
+
                 start <= '0';
                 test_count := test_count + 1;
             end loop;
+        
+            report "Simulation completed: Total tests = " & integer'image(NUM_TEST) &
+                ", Errors = " & integer'image(error_count);
 
             -- End Sim
             StopSim <= True;
