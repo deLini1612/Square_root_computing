@@ -1,4 +1,4 @@
-architecture a1 of square_root is
+architecture a3 of square_root3 is
     begin
         process(A)        
         variable R,Z                  : integer;
@@ -26,5 +26,5 @@ architecture a1 of square_root is
             end loop;
             result <= std_logic_vector(to_unsigned(Z,result'length));
         end process;
-end architecture a1;
+end architecture a3;
     
