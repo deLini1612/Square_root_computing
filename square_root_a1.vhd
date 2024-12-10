@@ -5,8 +5,8 @@ architecture a1 of square_root is
 
     begin
         process(clk,reset)        
-        variable x              : unsigned (n-1 downto 0);
-        variable next_x         : unsigned (n-1 downto 0);
+        variable x              : unsigned (n downto 0);
+        variable next_x         : unsigned (n downto 0);
 
         begin
             if(reset = '0') then -- reset is active low 
@@ -25,12 +25,12 @@ architecture a1 of square_root is
 
                     when INIT =>
                         x := (n-1 => '1', others => '0');
-                        next_x := to_unsigned(0,n);
+                        next_x := to_unsigned(0,next_x'length);
                         state <= COMP;
                     
                     when COMP =>
                             --next_x := x/2 + unsigned(A)/(2*x);
-                            next_x := (x + resize(unsigned(A)/x,n))/2;
+                            next_x := (x + resize(unsigned(A)/x,x'length))/2;
                             if (x = next_x or next_x = 0) then
                                 over <= '1';
                                 state <= DONE;
@@ -39,7 +39,7 @@ architecture a1 of square_root is
                     
                     when DONE =>
                         finished <= '1';
-                        result <= std_logic_vector(x);
+                        result <= std_logic_vector(x(n-1 downto 0));
                         if(start = '0') then
                             finished <= '0';
                             state <= IDLE;
