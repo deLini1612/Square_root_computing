@@ -11,7 +11,7 @@ TEST_NUMBER := 50
 SIM_ARGS_1 := $(TEST_NUMBER) a1 tb_square_root1.vhd square_root_a1.vhd
 SIM_ARGS_2 := $(TEST_NUMBER) a2 tb_square_root1.vhd square_root_a2.vhd
 SIM_ARGS_3 := $(TEST_NUMBER) a3 tb_square_root3.vhd square_root_a3.vhd
-SIM_ARGS_4 := $(TEST_NUMBER) a3 tb_square_root4.vhd square_root_a4.vhd
+SIM_ARGS_4 := $(TEST_NUMBER) a4 tb_square_root4.vhd square_root_a4.vhd
 
 all:
 	@echo "  make sim_a<ARC_NUM>  				- Run simulation for the corresponding architecture"
@@ -66,4 +66,4 @@ syn_a4:
 a4: sim_a4 syn_a4
 
 view_wave_a4: sim_a4
-	vsim -view $(SIM_DIR)/a3/a4.wlf -do $(SCRIPT_DIR)/a4.do
+	vsim -view $(SIM_DIR)/a4/a4.wlf -do $(SCRIPT_DIR)/a4.do

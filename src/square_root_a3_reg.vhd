@@ -28,7 +28,7 @@ begin
 
     AddReg: process(clk)
     begin
-        if(clk'event and clk='1') then
+        if(rising_edge(clk)) then
             A_Q <= A;
             result <= result_D;
         end if;

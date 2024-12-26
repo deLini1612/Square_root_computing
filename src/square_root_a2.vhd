@@ -29,7 +29,7 @@ architecture sequence_arc of square_root is
             if(reset = '0') then -- reset is active low 
                 state <= IDLE;
                 finished <= '0';
-            elsif(clk'event and clk='1') then
+            elsif(rising_edge(clk)) then
                 case state is
                     
                     when IDLE =>

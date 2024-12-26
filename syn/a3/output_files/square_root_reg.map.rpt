@@ -1,5 +1,5 @@
 Analysis & Synthesis report for square_root_reg
-Thu Dec 26 07:26:11 2024
+Thu Dec 26 14:11:10 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 26 07:26:11 2024           ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 26 14:11:10 2024           ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Standard Edition ;
 ; Revision Name                   ; square_root_reg                                 ;
 ; Top-level Entity Name           ; square_root_reg                                 ;
@@ -301,12 +301,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
-    Info: Processing started: Thu Dec 26 07:26:04 2024
+    Info: Processing started: Thu Dec 26 14:11:02 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off syn_a3 -c square_root_reg
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a3.vhd
-    Info (12022): Found design unit 1: square_root-combination_arc File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a3.vhd Line: 15
+    Info (12022): Found design unit 1: square_root-combination_arc File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a3.vhd Line: 12
     Info (12023): Found entity 1: square_root File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a3.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a3_reg.vhd
     Info (12022): Found design unit 1: square_root_reg-add_reg_arc File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a3_reg.vhd Line: 16
@@ -321,9 +321,9 @@ Info (21057): Implemented 2289 device resources after synthesis - the final reso
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 2192 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 602 megabytes
-    Info: Processing ended: Thu Dec 26 07:26:11 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 593 megabytes
+    Info: Processing ended: Thu Dec 26 14:11:10 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 

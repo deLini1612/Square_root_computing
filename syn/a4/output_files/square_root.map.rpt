@@ -1,0 +1,1145 @@
+Analysis & Synthesis report for square_root
+Thu Dec 26 15:08:03 2024
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |square_root
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Dec 26 15:08:03 2024           ;
+; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Standard Edition ;
+; Revision Name                   ; square_root                                     ;
+; Top-level Entity Name           ; square_root                                     ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 2537                                            ;
+; Total pins                      ; 100                                             ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; square_root        ; square_root        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processor 9            ;   0.0%      ;
+;     Processor 10           ;   0.0%      ;
+;     Processors 11-12       ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; ../../src/square_root_a4.vhd     ; yes             ; User VHDL File  ; /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a4.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 1644      ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 2747      ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 2         ;
+;     -- 4 input functions                    ; 1         ;
+;     -- <=3 input functions                  ; 2744      ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 2537      ;
+;                                             ;           ;
+; I/O pins                                    ; 100       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 2537      ;
+; Total fan-out                               ; 17552     ;
+; Average fan-out                             ; 3.20      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |square_root               ; 2747 (2747)         ; 2537 (2537)               ; 0                 ; 0          ; 100  ; 0            ; |square_root        ; square_root ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; stage_R[0][33]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][8]                           ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][7]                           ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][6]                           ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][5]                           ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][4]                           ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][3]                           ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][2]                           ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][1]                           ; Stuck at GND due to stuck port data_in ;
+; stage_R[0][0]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][8]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][7]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][6]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][5]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][4]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][3]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][2]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][1]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[0][0]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][8]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][7]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][6]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][5]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][4]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][3]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][2]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[1][1]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][8]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][7]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][6]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][5]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][4]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][3]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[2][2]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][8]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][7]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][6]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][5]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][4]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[3][3]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][8]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][7]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][6]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][5]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[4][4]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][8]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][7]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][6]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[5][5]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][8]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][7]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[6][6]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][8]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[7][7]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[8][8]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][31]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][30]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][29]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][28]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][27]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][26]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][25]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][24]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][23]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][22]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][21]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][20]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][19]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][18]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][17]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][16]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][15]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][14]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][13]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][12]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][11]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][10]                          ; Stuck at GND due to stuck port data_in ;
+; stage_z[9][9]                           ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][19]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][18]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][17]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][16]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][15]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][14]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][13]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][12]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][11]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[10][10]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][19]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][18]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][17]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][16]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][15]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][14]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][13]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][12]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[11][11]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][19]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][18]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][17]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][16]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][15]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][14]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][13]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[12][12]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][19]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][18]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][17]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][16]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][15]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][14]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[13][13]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][19]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][18]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][17]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][16]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][15]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[14][14]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][19]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][18]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][17]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][16]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[15][15]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][19]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][18]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][17]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[16][16]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][19]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][18]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[17][17]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][19]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[18][18]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[19][19]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[20][20]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[21][21]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[22][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[22][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[22][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[22][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[22][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[22][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[22][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[22][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[22][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[22][22]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[23][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[23][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[23][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[23][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[23][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[23][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[23][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[23][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[23][23]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[24][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[24][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[24][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[24][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[24][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[24][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[24][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[24][24]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[25][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[25][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[25][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[25][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[25][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[25][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[25][25]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[26][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[26][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[26][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[26][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[26][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[26][26]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[27][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[27][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[27][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[27][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[27][27]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[28][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[28][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[28][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[28][28]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[29][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[29][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[29][29]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[30][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[30][30]                         ; Stuck at GND due to stuck port data_in ;
+; stage_z[31][31]                         ; Stuck at GND due to stuck port data_in ;
+; stage_R[1][3]                           ; Merged with stage_R[1][33]             ;
+; stage_R[1][4]                           ; Merged with stage_R[1][33]             ;
+; stage_R[1][5]                           ; Merged with stage_R[1][33]             ;
+; stage_R[1][6]                           ; Merged with stage_R[1][33]             ;
+; stage_R[1][7]                           ; Merged with stage_R[1][33]             ;
+; stage_R[1][8]                           ; Merged with stage_R[1][33]             ;
+; stage_R[1][9]                           ; Merged with stage_R[1][33]             ;
+; stage_R[1][10]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][11]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][12]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][13]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][14]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][15]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][16]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][17]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][18]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][19]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][20]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][21]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][22]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][23]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][24]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][25]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][26]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][27]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][28]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][29]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][30]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][31]                          ; Merged with stage_R[1][33]             ;
+; stage_R[1][2]                           ; Merged with stage_R[1][33]             ;
+; stage_R[2][33]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][31]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][30]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][29]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][28]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][27]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][26]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][25]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][24]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][23]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][22]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][21]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][20]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][19]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][18]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][17]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][16]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][15]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][14]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][13]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][12]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][11]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][10]                          ; Merged with stage_R[2][5]              ;
+; stage_R[2][9]                           ; Merged with stage_R[2][5]              ;
+; stage_R[2][8]                           ; Merged with stage_R[2][5]              ;
+; stage_R[2][7]                           ; Merged with stage_R[2][5]              ;
+; stage_R[2][6]                           ; Merged with stage_R[2][5]              ;
+; stage_R[3][33]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][9]                           ; Merged with stage_R[3][8]              ;
+; stage_R[3][10]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][11]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][12]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][13]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][14]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][15]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][16]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][17]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][18]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][19]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][20]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][21]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][22]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][23]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][24]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][25]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][26]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][27]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][28]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][29]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][30]                          ; Merged with stage_R[3][8]              ;
+; stage_R[3][31]                          ; Merged with stage_R[3][8]              ;
+; stage_R[4][12]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][13]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][14]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][15]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][16]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][17]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][18]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][19]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][20]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][21]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][22]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][23]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][24]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][25]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][26]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][27]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][28]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][29]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][30]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][31]                          ; Merged with stage_R[4][11]             ;
+; stage_R[4][33]                          ; Merged with stage_R[4][11]             ;
+; stage_R[5][33]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][15]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][16]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][17]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][18]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][19]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][20]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][21]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][22]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][23]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][24]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][25]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][26]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][27]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][28]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][29]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][30]                          ; Merged with stage_R[5][14]             ;
+; stage_R[5][31]                          ; Merged with stage_R[5][14]             ;
+; stage_R[6][18]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][19]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][20]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][21]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][22]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][23]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][24]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][25]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][26]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][27]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][28]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][29]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][30]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][31]                          ; Merged with stage_R[6][17]             ;
+; stage_R[6][33]                          ; Merged with stage_R[6][17]             ;
+; stage_R[2][4]                           ; Merged with stage_R[2][5]              ;
+; Total Number of Removed Registers = 697 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                              ;
++----------------+---------------------------+---------------------------------------------------------------------------------------------+
+; Register name  ; Reason for Removal        ; Registers Removed due to This Register                                                      ;
++----------------+---------------------------+---------------------------------------------------------------------------------------------+
+; stage_z[0][0]  ; Stuck at GND              ; stage_z[1][1], stage_z[2][2], stage_z[3][3], stage_z[4][4], stage_z[5][5], stage_z[6][6],   ;
+;                ; due to stuck port data_in ; stage_z[7][7], stage_z[8][8], stage_z[9][9], stage_z[10][10], stage_z[11][11],              ;
+;                ;                           ; stage_z[12][12], stage_z[13][13], stage_z[14][14], stage_z[15][15], stage_z[16][16],        ;
+;                ;                           ; stage_z[17][17], stage_z[18][18], stage_z[19][19], stage_z[20][20], stage_z[21][21],        ;
+;                ;                           ; stage_z[22][22], stage_z[23][23], stage_z[24][24], stage_z[25][25], stage_z[26][26],        ;
+;                ;                           ; stage_z[27][27], stage_z[28][28], stage_z[29][29], stage_z[30][30], stage_z[31][31]         ;
+; stage_z[0][1]  ; Stuck at GND              ; stage_z[1][2], stage_z[2][3], stage_z[3][4], stage_z[4][5], stage_z[5][6], stage_z[6][7],   ;
+;                ; due to stuck port data_in ; stage_z[7][8], stage_z[8][9], stage_z[9][10], stage_z[10][11], stage_z[11][12],             ;
+;                ;                           ; stage_z[12][13], stage_z[13][14], stage_z[14][15], stage_z[15][16], stage_z[16][17],        ;
+;                ;                           ; stage_z[17][18], stage_z[18][19], stage_z[19][20], stage_z[20][21], stage_z[21][22],        ;
+;                ;                           ; stage_z[22][23], stage_z[23][24], stage_z[24][25], stage_z[25][26], stage_z[26][27],        ;
+;                ;                           ; stage_z[27][28], stage_z[28][29], stage_z[29][30], stage_z[30][31]                          ;
+; stage_z[0][2]  ; Stuck at GND              ; stage_z[1][3], stage_z[2][4], stage_z[3][5], stage_z[4][6], stage_z[5][7], stage_z[6][8],   ;
+;                ; due to stuck port data_in ; stage_z[7][9], stage_z[8][10], stage_z[9][11], stage_z[10][12], stage_z[11][13],            ;
+;                ;                           ; stage_z[12][14], stage_z[13][15], stage_z[14][16], stage_z[15][17], stage_z[16][18],        ;
+;                ;                           ; stage_z[17][19], stage_z[18][20], stage_z[19][21], stage_z[20][22], stage_z[21][23],        ;
+;                ;                           ; stage_z[22][24], stage_z[23][25], stage_z[24][26], stage_z[25][27], stage_z[26][28],        ;
+;                ;                           ; stage_z[27][29], stage_z[28][30], stage_z[29][31]                                           ;
+; stage_z[0][3]  ; Stuck at GND              ; stage_z[1][4], stage_z[2][5], stage_z[3][6], stage_z[4][7], stage_z[5][8], stage_z[6][9],   ;
+;                ; due to stuck port data_in ; stage_z[7][10], stage_z[8][11], stage_z[9][12], stage_z[10][13], stage_z[11][14],           ;
+;                ;                           ; stage_z[12][15], stage_z[13][16], stage_z[14][17], stage_z[15][18], stage_z[16][19],        ;
+;                ;                           ; stage_z[17][20], stage_z[18][21], stage_z[19][22], stage_z[20][23], stage_z[21][24],        ;
+;                ;                           ; stage_z[22][25], stage_z[23][26], stage_z[24][27], stage_z[25][28], stage_z[26][29],        ;
+;                ;                           ; stage_z[27][30], stage_z[28][31]                                                            ;
+; stage_z[0][4]  ; Stuck at GND              ; stage_z[1][5], stage_z[2][6], stage_z[3][7], stage_z[4][8], stage_z[5][9], stage_z[6][10],  ;
+;                ; due to stuck port data_in ; stage_z[7][11], stage_z[8][12], stage_z[9][13], stage_z[10][14], stage_z[11][15],           ;
+;                ;                           ; stage_z[12][16], stage_z[13][17], stage_z[14][18], stage_z[15][19], stage_z[16][20],        ;
+;                ;                           ; stage_z[17][21], stage_z[18][22], stage_z[19][23], stage_z[20][24], stage_z[21][25],        ;
+;                ;                           ; stage_z[22][26], stage_z[23][27], stage_z[24][28], stage_z[25][29], stage_z[26][30],        ;
+;                ;                           ; stage_z[27][31]                                                                             ;
+; stage_z[0][5]  ; Stuck at GND              ; stage_z[1][6], stage_z[2][7], stage_z[3][8], stage_z[4][9], stage_z[5][10], stage_z[6][11], ;
+;                ; due to stuck port data_in ; stage_z[7][12], stage_z[8][13], stage_z[9][14], stage_z[10][15], stage_z[11][16],           ;
+;                ;                           ; stage_z[12][17], stage_z[13][18], stage_z[14][19], stage_z[15][20], stage_z[16][21],        ;
+;                ;                           ; stage_z[17][22], stage_z[18][23], stage_z[19][24], stage_z[20][25], stage_z[21][26],        ;
+;                ;                           ; stage_z[22][27], stage_z[23][28], stage_z[24][29], stage_z[25][30], stage_z[26][31]         ;
+; stage_z[0][6]  ; Stuck at GND              ; stage_z[1][7], stage_z[2][8], stage_z[3][9], stage_z[4][10], stage_z[5][11],                ;
+;                ; due to stuck port data_in ; stage_z[6][12], stage_z[7][13], stage_z[8][14], stage_z[9][15], stage_z[10][16],            ;
+;                ;                           ; stage_z[11][17], stage_z[12][18], stage_z[13][19], stage_z[14][20], stage_z[15][21],        ;
+;                ;                           ; stage_z[16][22], stage_z[17][23], stage_z[18][24], stage_z[19][25], stage_z[20][26],        ;
+;                ;                           ; stage_z[21][27], stage_z[22][28], stage_z[23][29], stage_z[24][30], stage_z[25][31]         ;
+; stage_z[0][7]  ; Stuck at GND              ; stage_z[1][8], stage_z[2][9], stage_z[3][10], stage_z[4][11], stage_z[5][12],               ;
+;                ; due to stuck port data_in ; stage_z[6][13], stage_z[7][14], stage_z[8][15], stage_z[9][16], stage_z[10][17],            ;
+;                ;                           ; stage_z[11][18], stage_z[12][19], stage_z[13][20], stage_z[14][21], stage_z[15][22],        ;
+;                ;                           ; stage_z[16][23], stage_z[17][24], stage_z[18][25], stage_z[19][26], stage_z[20][27],        ;
+;                ;                           ; stage_z[21][28], stage_z[22][29], stage_z[23][30], stage_z[24][31]                          ;
+; stage_z[0][8]  ; Stuck at GND              ; stage_z[1][9], stage_z[2][10], stage_z[3][11], stage_z[4][12], stage_z[5][13],              ;
+;                ; due to stuck port data_in ; stage_z[6][14], stage_z[7][15], stage_z[8][16], stage_z[9][17], stage_z[10][18],            ;
+;                ;                           ; stage_z[11][19], stage_z[12][20], stage_z[13][21], stage_z[14][22], stage_z[15][23],        ;
+;                ;                           ; stage_z[16][24], stage_z[17][25], stage_z[18][26], stage_z[19][27], stage_z[20][28],        ;
+;                ;                           ; stage_z[21][29], stage_z[22][30], stage_z[23][31]                                           ;
+; stage_z[0][9]  ; Stuck at GND              ; stage_z[1][10], stage_z[2][11], stage_z[3][12], stage_z[4][13], stage_z[5][14],             ;
+;                ; due to stuck port data_in ; stage_z[6][15], stage_z[7][16], stage_z[8][17], stage_z[9][18], stage_z[10][19],            ;
+;                ;                           ; stage_z[11][20], stage_z[12][21], stage_z[13][22], stage_z[14][23], stage_z[15][24],        ;
+;                ;                           ; stage_z[16][25], stage_z[17][26], stage_z[18][27], stage_z[19][28], stage_z[20][29],        ;
+;                ;                           ; stage_z[21][30], stage_z[22][31]                                                            ;
+; stage_z[0][10] ; Stuck at GND              ; stage_z[1][11], stage_z[2][12], stage_z[3][13], stage_z[4][14], stage_z[5][15],             ;
+;                ; due to stuck port data_in ; stage_z[6][16], stage_z[7][17], stage_z[8][18], stage_z[9][19], stage_z[10][20],            ;
+;                ;                           ; stage_z[11][21], stage_z[12][22], stage_z[13][23], stage_z[14][24], stage_z[15][25],        ;
+;                ;                           ; stage_z[16][26], stage_z[17][27], stage_z[18][28], stage_z[19][29], stage_z[20][30],        ;
+;                ;                           ; stage_z[21][31]                                                                             ;
+; stage_z[0][11] ; Stuck at GND              ; stage_z[1][12], stage_z[2][13], stage_z[3][14], stage_z[4][15], stage_z[5][16],             ;
+;                ; due to stuck port data_in ; stage_z[6][17], stage_z[7][18], stage_z[8][19], stage_z[9][20], stage_z[10][21],            ;
+;                ;                           ; stage_z[11][22], stage_z[12][23], stage_z[13][24], stage_z[14][25], stage_z[15][26],        ;
+;                ;                           ; stage_z[16][27], stage_z[17][28], stage_z[18][29], stage_z[19][30], stage_z[20][31]         ;
+; stage_z[0][12] ; Stuck at GND              ; stage_z[1][13], stage_z[2][14], stage_z[3][15], stage_z[4][16], stage_z[5][17],             ;
+;                ; due to stuck port data_in ; stage_z[6][18], stage_z[7][19], stage_z[8][20], stage_z[9][21], stage_z[10][22],            ;
+;                ;                           ; stage_z[11][23], stage_z[12][24], stage_z[13][25], stage_z[14][26], stage_z[15][27],        ;
+;                ;                           ; stage_z[16][28], stage_z[17][29], stage_z[18][30], stage_z[19][31]                          ;
+; stage_z[0][13] ; Stuck at GND              ; stage_z[1][14], stage_z[2][15], stage_z[3][16], stage_z[4][17], stage_z[5][18],             ;
+;                ; due to stuck port data_in ; stage_z[6][19], stage_z[7][20], stage_z[8][21], stage_z[9][22], stage_z[10][23],            ;
+;                ;                           ; stage_z[11][24], stage_z[12][25], stage_z[13][26], stage_z[14][27], stage_z[15][28],        ;
+;                ;                           ; stage_z[16][29], stage_z[17][30], stage_z[18][31]                                           ;
+; stage_z[0][14] ; Stuck at GND              ; stage_z[1][15], stage_z[2][16], stage_z[3][17], stage_z[4][18], stage_z[5][19],             ;
+;                ; due to stuck port data_in ; stage_z[6][20], stage_z[7][21], stage_z[8][22], stage_z[9][23], stage_z[10][24],            ;
+;                ;                           ; stage_z[11][25], stage_z[12][26], stage_z[13][27], stage_z[14][28], stage_z[15][29],        ;
+;                ;                           ; stage_z[16][30], stage_z[17][31]                                                            ;
+; stage_z[0][15] ; Stuck at GND              ; stage_z[1][16], stage_z[2][17], stage_z[3][18], stage_z[4][19], stage_z[5][20],             ;
+;                ; due to stuck port data_in ; stage_z[6][21], stage_z[7][22], stage_z[8][23], stage_z[9][24], stage_z[10][25],            ;
+;                ;                           ; stage_z[11][26], stage_z[12][27], stage_z[13][28], stage_z[14][29], stage_z[15][30],        ;
+;                ;                           ; stage_z[16][31]                                                                             ;
+; stage_z[0][16] ; Stuck at GND              ; stage_z[1][17], stage_z[2][18], stage_z[3][19], stage_z[4][20], stage_z[5][21],             ;
+;                ; due to stuck port data_in ; stage_z[6][22], stage_z[7][23], stage_z[8][24], stage_z[9][25], stage_z[10][26],            ;
+;                ;                           ; stage_z[11][27], stage_z[12][28], stage_z[13][29], stage_z[14][30], stage_z[15][31]         ;
+; stage_z[0][17] ; Stuck at GND              ; stage_z[1][18], stage_z[2][19], stage_z[3][20], stage_z[4][21], stage_z[5][22],             ;
+;                ; due to stuck port data_in ; stage_z[6][23], stage_z[7][24], stage_z[8][25], stage_z[9][26], stage_z[10][27],            ;
+;                ;                           ; stage_z[11][28], stage_z[12][29], stage_z[13][30], stage_z[14][31]                          ;
+; stage_z[0][18] ; Stuck at GND              ; stage_z[1][19], stage_z[2][20], stage_z[3][21], stage_z[4][22], stage_z[5][23],             ;
+;                ; due to stuck port data_in ; stage_z[6][24], stage_z[7][25], stage_z[8][26], stage_z[9][27], stage_z[10][28],            ;
+;                ;                           ; stage_z[11][29], stage_z[12][30], stage_z[13][31]                                           ;
+; stage_z[0][19] ; Stuck at GND              ; stage_z[1][20], stage_z[2][21], stage_z[3][22], stage_z[4][23], stage_z[5][24],             ;
+;                ; due to stuck port data_in ; stage_z[6][25], stage_z[7][26], stage_z[8][27], stage_z[9][28], stage_z[10][29],            ;
+;                ;                           ; stage_z[11][30], stage_z[12][31]                                                            ;
+; stage_z[0][20] ; Stuck at GND              ; stage_z[1][21], stage_z[2][22], stage_z[3][23], stage_z[4][24], stage_z[5][25],             ;
+;                ; due to stuck port data_in ; stage_z[6][26], stage_z[7][27], stage_z[8][28], stage_z[9][29], stage_z[10][30],            ;
+;                ;                           ; stage_z[11][31]                                                                             ;
+; stage_z[0][21] ; Stuck at GND              ; stage_z[1][22], stage_z[2][23], stage_z[3][24], stage_z[4][25], stage_z[5][26],             ;
+;                ; due to stuck port data_in ; stage_z[6][27], stage_z[7][28], stage_z[8][29], stage_z[9][30], stage_z[10][31]             ;
+; stage_z[0][22] ; Stuck at GND              ; stage_z[1][23], stage_z[2][24], stage_z[3][25], stage_z[4][26], stage_z[5][27],             ;
+;                ; due to stuck port data_in ; stage_z[6][28], stage_z[7][29], stage_z[8][30], stage_z[9][31]                              ;
+; stage_z[0][23] ; Stuck at GND              ; stage_z[1][24], stage_z[2][25], stage_z[3][26], stage_z[4][27], stage_z[5][28],             ;
+;                ; due to stuck port data_in ; stage_z[6][29], stage_z[7][30], stage_z[8][31]                                              ;
+; stage_z[0][24] ; Stuck at GND              ; stage_z[1][25], stage_z[2][26], stage_z[3][27], stage_z[4][28], stage_z[5][29],             ;
+;                ; due to stuck port data_in ; stage_z[6][30], stage_z[7][31]                                                              ;
+; stage_z[0][25] ; Stuck at GND              ; stage_z[1][26], stage_z[2][27], stage_z[3][28], stage_z[4][29], stage_z[5][30],             ;
+;                ; due to stuck port data_in ; stage_z[6][31]                                                                              ;
+; stage_z[0][26] ; Stuck at GND              ; stage_z[1][27], stage_z[2][28], stage_z[3][29], stage_z[4][30], stage_z[5][31]              ;
+;                ; due to stuck port data_in ;                                                                                             ;
+; stage_z[0][27] ; Stuck at GND              ; stage_z[1][28], stage_z[2][29], stage_z[3][30], stage_z[4][31]                              ;
+;                ; due to stuck port data_in ;                                                                                             ;
+; stage_z[0][28] ; Stuck at GND              ; stage_z[1][29], stage_z[2][30], stage_z[3][31]                                              ;
+;                ; due to stuck port data_in ;                                                                                             ;
+; stage_z[0][29] ; Stuck at GND              ; stage_z[1][30], stage_z[2][31]                                                              ;
+;                ; due to stuck port data_in ;                                                                                             ;
+; stage_z[0][30] ; Stuck at GND              ; stage_z[1][31]                                                                              ;
+;                ; due to stuck port data_in ;                                                                                             ;
++----------------+---------------------------+---------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2537  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 58    ;
+; Number of registers using Asynchronous Clear ; 2505  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2503  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |square_root ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; n              ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 2537                        ;
+;     CLR               ; 34                          ;
+;     ENA               ; 32                          ;
+;     ENA CLR           ; 2413                        ;
+;     ENA CLR SLD       ; 58                          ;
+; arriav_lcell_comb     ; 2747                        ;
+;     arith             ; 1876                        ;
+;         1 data inputs ; 886                         ;
+;         2 data inputs ; 990                         ;
+;     normal            ; 871                         ;
+;         1 data inputs ; 37                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 826                         ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 2                           ;
+; boundary_port         ; 100                         ;
+;                       ;                             ;
+; Max LUT depth         ; 6.30                        ;
+; Average LUT depth     ; 3.85                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
+    Info: Processing started: Thu Dec 26 15:07:54 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off syn_a4 -c square_root
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a4.vhd
+    Info (12022): Found design unit 1: square_root-pipeline_arc File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a4.vhd Line: 15
+    Info (12023): Found entity 1: square_root File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a4.vhd Line: 6
+Info (12127): Elaborating entity "square_root" for the top level hierarchy
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4496 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 67 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 4396 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 593 megabytes
+    Info: Processing ended: Thu Dec 26 15:08:03 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:16
+
+

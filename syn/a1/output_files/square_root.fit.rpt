@@ -1,5 +1,5 @@
 Fitter report for square_root
-Thu Dec 26 05:08:20 2024
+Thu Dec 26 14:21:04 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Thu Dec 26 05:08:20 2024           ;
+; Fitter Status                   ; Successful - Thu Dec 26 14:21:04 2024           ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Standard Edition ;
 ; Revision Name                   ; square_root                                     ;
 ; Top-level Entity Name           ; square_root                                     ;
@@ -153,22 +153,22 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.34        ;
+; Average used               ; 1.31        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.8%      ;
-;     Processor 3            ;   3.4%      ;
-;     Processor 4            ;   3.1%      ;
-;     Processor 5            ;   3.0%      ;
-;     Processor 6            ;   3.0%      ;
-;     Processor 7            ;   2.9%      ;
-;     Processor 8            ;   2.9%      ;
-;     Processor 9            ;   2.6%      ;
-;     Processor 10           ;   2.6%      ;
-;     Processor 11           ;   2.6%      ;
-;     Processor 12           ;   2.6%      ;
+;     Processor 2            ;   4.6%      ;
+;     Processor 3            ;   3.2%      ;
+;     Processor 4            ;   2.9%      ;
+;     Processor 5            ;   2.8%      ;
+;     Processor 6            ;   2.8%      ;
+;     Processor 7            ;   2.7%      ;
+;     Processor 8            ;   2.7%      ;
+;     Processor 9            ;   2.4%      ;
+;     Processor 10           ;   2.4%      ;
+;     Processor 11           ;   2.4%      ;
+;     Processor 12           ;   2.4%      ;
 +----------------------------+-------------+
 
 
@@ -2159,7 +2159,7 @@ Info (170195): Router estimated average interconnect usage is 1% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:19
-Info (11888): Total time spent on timing analysis during the Fitter is 3.82 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 3.90 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2167,10 +2167,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
 Info (144001): Generated suppressed messages file /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/syn/a1/output_files/square_root.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 2555 megabytes
-    Info: Processing ended: Thu Dec 26 05:08:21 2024
-    Info: Elapsed time: 00:01:02
-    Info: Total CPU time (on all processors): 00:04:39
+    Info: Peak virtual memory: 2567 megabytes
+    Info: Processing ended: Thu Dec 26 14:21:06 2024
+    Info: Elapsed time: 00:01:04
+    Info: Total CPU time (on all processors): 00:04:43
 
 
 +----------------------------+

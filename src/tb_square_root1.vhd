@@ -91,37 +91,37 @@ begin
         begin
 
             -- Start testing
-            wait until reset = '1' and clk = '1' and clk'event;
+            wait until reset = '1' and rising_edge(clk);
 
             -- Direct test: required test 0, 1, 512, 5499030, 1194877489
             start <= '1';
             A <= std_logic_vector(to_unsigned(0,A'length));
 
-            wait until finished = '1' and clk = '1' and clk'event;
+            wait until finished = '1' and rising_edge(clk);
             start <= '0';
-            wait until clk = '1' and clk'event;
+            wait until rising_edge(clk);
             start <= '1';
             A <= std_logic_vector(to_unsigned(1,A'length));
 
-            wait until finished = '1' and clk = '1' and clk'event;
+            wait until finished = '1' and rising_edge(clk);
             start <= '0';
-            wait until clk = '1' and clk'event;
+            wait until rising_edge(clk);
             start <= '1';
             A <= std_logic_vector(to_unsigned(512,A'length));
 
-            wait until finished = '1' and clk = '1' and clk'event;
+            wait until finished = '1' and rising_edge(clk);
             start <= '0';
-            wait until clk = '1' and clk'event;
+            wait until rising_edge(clk);
             start <= '1';
             A <= std_logic_vector(to_unsigned(5499030,A'length));
 
-            wait until finished = '1' and clk = '1' and clk'event;
+            wait until finished = '1' and rising_edge(clk);
             start <= '0';
-            wait until clk = '1' and clk'event;
+            wait until rising_edge(clk);
             start <= '1';
             A <= std_logic_vector(to_unsigned(1194877489,A'length));
 
-            wait until finished = '1' and clk = '1' and clk'event;
+            wait until finished = '1' and rising_edge(clk);
             start <= '0';
 
             -- Random test
@@ -134,10 +134,10 @@ begin
                 read(golden_line, temp_out_str);
                 golden_data := to_stdlogicvector(temp_out_str, n);
 
-                wait until clk = '1' and clk'event;
+                wait until rising_edge(clk);
                 start <= '1';
                 A <= input_data;
-                wait until finished = '1' and clk = '1' and clk'event;
+                wait until finished = '1' and rising_edge(clk);
 
                 -- Compare output
                 if result /= golden_data then

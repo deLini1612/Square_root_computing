@@ -11,7 +11,7 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # QuestaSim-64 vcom 2023.2_1 Compiler 2023.05 May 12 2023
-# Start time: 06:51:29 on Dec 26,2024
+# Start time: 13:41:15 on Dec 26,2024
 # vcom -work work -2008 -explicit -vopt /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a2.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -19,10 +19,10 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity square_root
 # -- Compiling architecture sequence_arc of square_root
-# End time: 06:51:29 on Dec 26,2024, Elapsed time: 0:00:00
+# End time: 13:41:15 on Dec 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 2023.2_1 Compiler 2023.05 May 12 2023
-# Start time: 06:51:29 on Dec 26,2024
+# Start time: 13:41:15 on Dec 26,2024
 # vcom -work work -2008 -explicit -vopt /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -31,10 +31,10 @@
 # -- Compiling entity tb_square_root
 # -- Compiling architecture sequence_tb of tb_square_root
 # -- Loading entity square_root
-# End time: 06:51:29 on Dec 26,2024, Elapsed time: 0:00:00
+# End time: 13:41:15 on Dec 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" -c -wlf a2.wlf work.tb_square_root 
-# Start time: 06:51:29 on Dec 26,2024
+# Start time: 13:41:15 on Dec 26,2024
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vopt-143) Recognized 1 FSM in architecture body "square_root(sequence_arc)".
@@ -64,5 +64,5 @@
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # ** Note: Simulation completed: Accuracy = 50/50
 #    Time: 19 us  Iteration: 1  Instance: /tb_square_root
-# End time: 06:51:30 on Dec 26,2024, Elapsed time: 0:00:01
+# End time: 13:41:16 on Dec 26,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
