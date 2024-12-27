@@ -15,18 +15,19 @@ end square_root;
 architecture pipeline_arc of square_root is
 
     -- Type definitions for pipeline registers
-    type RZ is array(0 to n) of unsigned(n+1 downto 0);
+    type Z is array(0 to n) of unsigned(n-1 downto 0);
+    type R is array(0 to n) of unsigned(n+1 downto 0);
     type D is array (0 to n) of unsigned(2*n-1 downto 0); 
     
-    signal stage_R 		        : RZ;
-    signal stage_z 		        : RZ;
+    signal stage_R 		        : R;
+    signal stage_Z 		        : Z;
     signal stage_D 		        : D;
     signal shift_reg_start	    : unsigned(n downto 0);
 
 -- Pipeline registers
 begin
     process(clk, reset)
-    variable stage_R_var        : RZ;
+    variable stage_R_var        : R;
     begin
         if (reset = '0') then
             -- Reset all pipeline registers
@@ -36,6 +37,7 @@ begin
             stage_D <= (others => (others => '0'));
             shift_reg_start <= (others => '0');
             finished <= '0';
+            result <= (others => '0');
 
         elsif (rising_edge(clk)) then
             -- Stage 0: Initialize
@@ -62,12 +64,8 @@ begin
                     stage_R(i) <= stage_R_var(i);
 
                     -- Compute Z
-                    if (stage_R_var(i)(n+1) = '0') then
-                        stage_Z(i) <= resize(2*stage_Z(i-1) + 1, stage_Z(i)'length);
-                    else
-                        stage_Z(i) <= resize(2*stage_Z(i-1), stage_Z(i)'length);
-                    end if;
-                    
+                    stage_Z(i) <= stage_Z(i-1)(stage_Z(i-1)'high-1 downto 0) & not(stage_R_var(i)(stage_R_var(i)'high));
+
                     -- Shift D
                     stage_D(i) <= resize(stage_D(i-1)*4, stage_D(i-1)'length);
                 end if;

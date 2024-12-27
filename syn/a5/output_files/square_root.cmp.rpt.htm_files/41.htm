@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML><HEAD>
-<TITLE>Fitter Partition Statistics</TITLE>
+<TITLE>Input Pins</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -18,404 +18,1364 @@
 <BODY>
 <TABLE>
 <thead><TR  bgcolor="#BFBFBF">
-<TH>Statistic</TH>
-<TH>Top</TH>
-<TH>hard_block:auto_generated_inst</TH>
+<TH>Name</TH>
+<TH>Pin #</TH>
+<TH>I/O Bank</TH>
+<TH>X coordinate</TH>
+<TH>Y coordinate</TH>
+<TH>Z coordinate</TH>
+<TH>Combinational Fan-Out</TH>
+<TH>Registered Fan-Out</TH>
+<TH>Global</TH>
+<TH>Input Register</TH>
+<TH>PCI I/O Enabled</TH>
+<TH>Bus Hold</TH>
+<TH>Weak Pull Up</TH>
+<TH>I/O Standard</TH>
+<TH>Termination</TH>
+<TH>Termination Control Block</TH>
+<TH>Location assigned by</TH>
+<TH>Slew Rate</TH>
 </TR>
 </thead><tbody><TR >
-<TD >Logic utilization (ALMs needed / total ALMs on device)</TD>
-<TD >128 / 56480 ( < 1 % )</TD>
-<TD >0 / 56480 ( 0 % )</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >ALMs needed [=A-B+C]</TD>
-<TD >128</TD>
+<TD >A[0]</TD>
+<TD >AA12</TD>
+<TD >3B</TD>
+<TD >40</TD>
 <TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;[A] ALMs used in final placement [=a+b+c+d]</TD>
-<TD >143 / 56480 ( < 1 % )</TD>
-<TD >0 / 56480 ( 0 % )</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[a] ALMs used for LUT logic and registers</TD>
-<TD >53</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[b] ALMs used for LUT logic</TD>
-<TD >44</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[c] ALMs used for registers</TD>
-<TD >46</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[d] ALMs used for memory (up to half of total ALMs)</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;[B] Estimate of ALMs recoverable by dense packing</TD>
-<TD >15 / 56480 ( < 1 % )</TD>
-<TD >0 / 56480 ( 0 % )</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;[C] Estimate of ALMs unavailable [=a+b+c+d]</TD>
-<TD >0 / 56480 ( 0 % )</TD>
-<TD >0 / 56480 ( 0 % )</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[a] Due to location constrained logic</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[b] Due to LAB-wide signal conflicts</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[c] Due to LAB input limits</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[d] Due to virtual I/Os</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Difficulty packing design</TD>
-<TD >Low</TD>
-<TD >Low</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Total LABs:&nbsp; partially or completely used</TD>
-<TD >21 / 5648 ( < 1 % )</TD>
-<TD >0 / 5648 ( 0 % )</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Logic LABs</TD>
-<TD >21</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Memory LABs (up to half of total LABs)</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Combinational ALUT usage for logic</TD>
-<TD >185</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- 7 input functions</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- 6 input functions</TD>
-<TD >9</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- 5 input functions</TD>
+<TD >34</TD>
 <TD >1</TD>
 <TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- 4 input functions</TD>
+<TD >A[10]</TD>
+<TD >W16</TD>
+<TD >4A</TD>
+<TD >64</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[11]</TD>
+<TD >Y17</TD>
+<TD >4A</TD>
+<TD >58</TD>
+<TD >0</TD>
+<TD >40</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[12]</TD>
+<TD >AA19</TD>
+<TD >4A</TD>
+<TD >62</TD>
+<TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[13]</TD>
+<TD >Y14</TD>
+<TD >4A</TD>
+<TD >54</TD>
+<TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[14]</TD>
+<TD >T14</TD>
+<TD >4A</TD>
+<TD >60</TD>
+<TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[15]</TD>
+<TD >AA13</TD>
+<TD >4A</TD>
+<TD >52</TD>
+<TD >0</TD>
+<TD >34</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[16]</TD>
+<TD >AA18</TD>
+<TD >4A</TD>
+<TD >60</TD>
+<TD >0</TD>
+<TD >34</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[17]</TD>
+<TD >AB18</TD>
+<TD >4A</TD>
+<TD >56</TD>
+<TD >0</TD>
+<TD >34</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[18]</TD>
+<TD >AA17</TD>
+<TD >4A</TD>
+<TD >60</TD>
+<TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[19]</TD>
+<TD >AB21</TD>
+<TD >4A</TD>
+<TD >58</TD>
+<TD >0</TD>
+<TD >74</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[1]</TD>
+<TD >U7</TD>
+<TD >3A</TD>
+<TD >2</TD>
+<TD >0</TD>
+<TD >91</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[20]</TD>
+<TD >W19</TD>
+<TD >4A</TD>
+<TD >62</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[21]</TD>
+<TD >V14</TD>
+<TD >4A</TD>
+<TD >56</TD>
+<TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[22]</TD>
+<TD >V20</TD>
+<TD >4A</TD>
+<TD >62</TD>
+<TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[23]</TD>
+<TD >T12</TD>
+<TD >4A</TD>
+<TD >52</TD>
+<TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[24]</TD>
+<TD >AA20</TD>
+<TD >4A</TD>
+<TD >62</TD>
+<TD >0</TD>
+<TD >34</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[25]</TD>
+<TD >T20</TD>
+<TD >5A</TD>
+<TD >89</TD>
+<TD >4</TD>
+<TD >94</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[26]</TD>
+<TD >AB20</TD>
+<TD >4A</TD>
+<TD >58</TD>
+<TD >0</TD>
+<TD >91</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[27]</TD>
+<TD >AB15</TD>
+<TD >4A</TD>
+<TD >54</TD>
+<TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[28]</TD>
+<TD >W22</TD>
+<TD >4A</TD>
+<TD >66</TD>
+<TD >0</TD>
+<TD >74</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[29]</TD>
+<TD >T17</TD>
+<TD >5A</TD>
+<TD >89</TD>
+<TD >4</TD>
+<TD >60</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[2]</TD>
+<TD >U15</TD>
+<TD >4A</TD>
+<TD >60</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[30]</TD>
+<TD >U16</TD>
+<TD >4A</TD>
+<TD >72</TD>
+<TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[31]</TD>
+<TD >Y15</TD>
+<TD >4A</TD>
+<TD >54</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[32]</TD>
+<TD >U21</TD>
+<TD >4A</TD>
+<TD >72</TD>
+<TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[33]</TD>
+<TD >T13</TD>
+<TD >4A</TD>
+<TD >52</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[34]</TD>
+<TD >V21</TD>
+<TD >4A</TD>
+<TD >70</TD>
+<TD >0</TD>
+<TD >34</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[35]</TD>
+<TD >Y16</TD>
+<TD >4A</TD>
+<TD >58</TD>
+<TD >0</TD>
+<TD >57</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[36]</TD>
+<TD >AB22</TD>
+<TD >4A</TD>
+<TD >64</TD>
+<TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[37]</TD>
+<TD >AA15</TD>
+<TD >4A</TD>
+<TD >54</TD>
+<TD >0</TD>
+<TD >34</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[38]</TD>
+<TD >U20</TD>
+<TD >4A</TD>
+<TD >72</TD>
+<TD >0</TD>
+<TD >34</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[39]</TD>
+<TD >P9</TD>
+<TD >3B</TD>
+<TD >40</TD>
+<TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[3]</TD>
+<TD >V13</TD>
+<TD >4A</TD>
+<TD >50</TD>
+<TD >0</TD>
+<TD >57</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[40]</TD>
+<TD >R22</TD>
+<TD >5A</TD>
+<TD >89</TD>
+<TD >6</TD>
+<TD >54</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[41]</TD>
+<TD >R15</TD>
+<TD >5A</TD>
+<TD >89</TD>
+<TD >6</TD>
+<TD >20</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[42]</TD>
+<TD >U22</TD>
+<TD >4A</TD>
+<TD >70</TD>
+<TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[43]</TD>
+<TD >AB12</TD>
+<TD >4A</TD>
+<TD >50</TD>
+<TD >0</TD>
+<TD >74</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[44]</TD>
+<TD >R14</TD>
+<TD >4A</TD>
+<TD >68</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[45]</TD>
+<TD >AA14</TD>
+<TD >4A</TD>
+<TD >52</TD>
+<TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[46]</TD>
+<TD >V19</TD>
+<TD >4A</TD>
+<TD >70</TD>
+<TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[47]</TD>
+<TD >AB13</TD>
+<TD >4A</TD>
+<TD >50</TD>
+<TD >0</TD>
+<TD >91</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[48]</TD>
+<TD >T15</TD>
+<TD >5A</TD>
+<TD >89</TD>
+<TD >6</TD>
+<TD >3</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[49]</TD>
+<TD >N9</TD>
+<TD >3B</TD>
+<TD >40</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[4]</TD>
+<TD >V18</TD>
+<TD >4A</TD>
+<TD >70</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[50]</TD>
+<TD >Y21</TD>
+<TD >4A</TD>
+<TD >68</TD>
+<TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[51]</TD>
+<TD >U12</TD>
+<TD >3B</TD>
+<TD >36</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[52]</TD>
+<TD >P14</TD>
+<TD >4A</TD>
+<TD >68</TD>
+<TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[53]</TD>
+<TD >AA10</TD>
+<TD >3B</TD>
 <TD >32</TD>
 <TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- <=3 input functions</TD>
-<TD >143</TD>
+<TD >A[54]</TD>
+<TD >V16</TD>
+<TD >4A</TD>
+<TD >64</TD>
 <TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >Combinational ALUT usage for route-throughs</TD>
-<TD >79</TD>
+<TD >A[55]</TD>
+<TD >R12</TD>
+<TD >3B</TD>
+<TD >36</TD>
 <TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >Memory ALUT usage</TD>
+<TD >A[56]</TD>
+<TD >AA22</TD>
+<TD >4A</TD>
+<TD >64</TD>
 <TD >0</TD>
+<TD >34</TD>
+<TD >1</TD>
 <TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- 64-address deep</TD>
+<TD >A[57]</TD>
+<TD >U13</TD>
+<TD >4A</TD>
+<TD >50</TD>
 <TD >0</TD>
+<TD >40</TD>
+<TD >1</TD>
 <TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- 32-address deep</TD>
+<TD >A[58]</TD>
+<TD >Y22</TD>
+<TD >4A</TD>
+<TD >66</TD>
 <TD >0</TD>
+<TD >91</TD>
+<TD >1</TD>
 <TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
+<TD >A[59]</TD>
+<TD >U11</TD>
+<TD >3B</TD>
+<TD >36</TD>
+<TD >0</TD>
+<TD >17</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >Dedicated logic registers</TD>
+<TD >A[5]</TD>
+<TD >R11</TD>
+<TD >3B</TD>
+<TD >38</TD>
 <TD >0</TD>
 <TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- By type:</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
+<TD >A[60]</TD>
+<TD >Y19</TD>
+<TD >4A</TD>
+<TD >66</TD>
+<TD >0</TD>
+<TD >40</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Primary logic registers</TD>
-<TD >196 / 112960 ( < 1 % )</TD>
-<TD >0 / 112960 ( 0 % )</TD>
+<TD >A[61]</TD>
+<TD >Y10</TD>
+<TD >3B</TD>
+<TD >34</TD>
+<TD >0</TD>
+<TD >91</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Secondary logic registers</TD>
-<TD >13 / 112960 ( < 1 % )</TD>
-<TD >0 / 112960 ( 0 % )</TD>
+<TD >A[62]</TD>
+<TD >P12</TD>
+<TD >3B</TD>
+<TD >36</TD>
+<TD >0</TD>
+<TD >34</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- By function:</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
+<TD >A[63]</TD>
+<TD >Y11</TD>
+<TD >3B</TD>
+<TD >40</TD>
+<TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Design implementation registers</TD>
-<TD >199</TD>
+<TD >A[6]</TD>
+<TD >Y20</TD>
+<TD >4A</TD>
+<TD >66</TD>
 <TD >0</TD>
+<TD >57</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Routing optimization registers</TD>
-<TD >10</TD>
+<TD >A[7]</TD>
+<TD >AB17</TD>
+<TD >4A</TD>
+<TD >56</TD>
 <TD >0</TD>
+<TD >51</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
+<TD >A[8]</TD>
+<TD >W21</TD>
+<TD >4A</TD>
+<TD >68</TD>
+<TD >0</TD>
+<TD >34</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
+<TD >A[9]</TD>
+<TD >V15</TD>
+<TD >4A</TD>
+<TD >56</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >Virtual pins</TD>
+<TD >clk</TD>
+<TD >M16</TD>
+<TD >5B</TD>
+<TD >89</TD>
+<TD >35</TD>
+<TD >60</TD>
+<TD >214</TD>
 <TD >0</TD>
-<TD >0</TD>
+<TD >yes</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >I/O pins</TD>
-<TD >100</TD>
+<TD >reset</TD>
+<TD >W9</TD>
+<TD >3A</TD>
+<TD >4</TD>
 <TD >0</TD>
+<TD >34</TD>
+<TD >73</TD>
+<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >I/O registers</TD>
+<TD >start</TD>
+<TD >AB11</TD>
+<TD >3B</TD>
+<TD >38</TD>
 <TD >0</TD>
+<TD >34</TD>
+<TD >5</TD>
 <TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Total block memory bits</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Total block memory implementation bits</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Clock enable block</TD>
-<TD >1 / 122 ( < 1 % )</TD>
-<TD >0 / 122 ( 0 % )</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Connections</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Input Connections</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Registered Input Connections</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Output Connections</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Registered Output Connections</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Internal Connections</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Total Connections</TD>
-<TD >1466</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Registered Connections</TD>
-<TD >505</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >External Connections</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Top</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- hard_block:auto_generated_inst</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Partition Interface</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Input Ports</TD>
-<TD >67</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Output Ports</TD>
-<TD >33</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Bidir Ports</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Registered Ports</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Registered Input Ports</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Registered Output Ports</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >Port Connectivity</TD>
-<TD >&nbsp;</TD>
-<TD >&nbsp;</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Input Ports driven by GND</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Output Ports driven by GND</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Input Ports driven by VCC</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Output Ports driven by VCC</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Input Ports with no Source</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Output Ports with no Source</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Input Ports with no Fanout</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-</tbody><tbody><TR >
-<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Output Ports with no Fanout</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >no</TD>
+<TD >Off</TD>
+<TD >2.5 V</TD>
+<TD >Off</TD>
+<TD >--</TD>
+<TD >Fitter</TD>
+<TD >no</TD>
 </TR>
 </tbody></TABLE>
 

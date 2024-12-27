@@ -28,6 +28,7 @@ architecture sequence_arc of square_root is
             if(reset = '0') then -- reset is active low 
                 state <= IDLE;
                 finished <= '0';
+                result <= (others => '0');
 
             elsif(rising_edge(clk)) then
                 case state is

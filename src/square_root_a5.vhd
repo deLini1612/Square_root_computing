@@ -16,11 +16,11 @@ port (
 end square_root;
 
 architecture sequence_arc of square_root is
-    type statetype is (IDLE, INIT, COMP, DONE);
+    type statetype is (IDLE, COMP, DONE);
     signal state : statetype;
     signal Z     : unsigned (n-1 downto 0);
     signal D     : unsigned (2*n-1 downto 0); 
-    signal cnt   : integer;
+    signal cnt   : unsigned (n-1 downto 0);
     signal finish_flag: std_logic;
 
     begin
@@ -29,23 +29,21 @@ architecture sequence_arc of square_root is
             if(reset = '0') then -- reset is active low 
                 state <= IDLE;
                 finish_flag <= '0';
+                cnt <= (others => '0');
             elsif(clk'event and clk='1') then
                 case state is
                     
                     when IDLE =>
                         if(start = '1') then
-                            state <= INIT;
+                            state <= COMP;
+                            cnt <= to_unsigned(1, cnt'length); 
                         end if;
-
-                    when INIT =>
-                        cnt <= n;    
-                        state <= COMP;
                     
                     when COMP =>
-                            if (cnt = 1) then
+                            if (cnt = 0) then
                                 state <= DONE;
                             else 
-                                cnt <= cnt - 1;
+                                cnt <= cnt sll 1;
                             end if;
 
                     when DONE =>
@@ -67,25 +65,28 @@ architecture sequence_arc of square_root is
         variable R     : unsigned (n+1 downto 0);  
         begin
             if(clk'event and clk='1') then
-                if(cnt = n) then
+                if(cnt = 2) then
                     D <= unsigned(A);
                     R := (others => '0');
                     Z <= (others => '0');
                 else
-                    if (R(n+1) = '0') then
-                        R := (R(n-1 downto 0) & D(2*n-1 downto 2*n-2)) - (Z(n-1 downto 0) & R(n+1) & '1');
+                    if (R(R'high) = '0') then
+                        R := (R(R'high-2 downto 0) & D(D'high downto D'high-1)) - (Z(Z'high downto 0) & R(R'high) & '1');
                     else
-                        R := (R(n-1 downto 0) & D(2*n-1 downto 2*n-2)) + (Z(n-1 downto 0) & R(n+1) & '1');
+                        R := (R(R'high-2 downto 0) & D(D'high downto D'high-1)) + (Z(Z'high downto 0) & R(R'high) & '1');
                     end if;
-                        Z <= Z(n-2 downto 0) & not R(n+1);
-                        D <= D(2*n-3 downto 0) & '0' & '0';
+                        Z <= Z(Z'high-1 downto 0) & not R(R'high);
+                        D <= D(D'high-2 downto 0) & '0' & '0';
                 end if;
             end if;
         end process;
 
         output: process(clk, reset)
         begin
-            if(clk'event and clk='1') then
+            if(reset = '0') then
+                finished <= '0';
+                result <= (others => '0');
+            elsif(clk'event and clk='1') then
                 if(finish_flag = '1') then
                     result <= std_logic_vector(Z);
                     finished <= '1';

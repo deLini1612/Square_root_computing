@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML><HEAD>
-<TITLE>Fitter Resource Utilization by Entity</TITLE>
+<TITLE>Delay Chain Summary</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -18,42 +18,1317 @@
 <BODY>
 <TABLE>
 <thead><TR  bgcolor="#BFBFBF">
-<TH>Compilation Hierarchy Node</TH>
-<TH>ALMs needed [=A-B+C]</TH>
-<TH>[A] ALMs used in final placement</TH>
-<TH>[B] Estimate of ALMs recoverable by dense packing</TH>
-<TH>[C] Estimate of ALMs unavailable</TH>
-<TH>ALMs used for memory</TH>
-<TH>Combinational ALUTs</TH>
-<TH>Dedicated Logic Registers</TH>
-<TH>I/O Registers</TH>
-<TH>Block Memory Bits</TH>
-<TH>M10Ks</TH>
-<TH>DSP Blocks</TH>
-<TH>Pins</TH>
-<TH>Virtual Pins</TH>
-<TH>Full Hierarchy Name</TH>
-<TH>Entity Name</TH>
-<TH>Library Name</TH>
+<TH>Name</TH>
+<TH>Pin Type</TH>
+<TH>D1</TH>
+<TH>D3_0</TH>
+<TH>D3_1</TH>
+<TH>D4</TH>
+<TH>D5</TH>
+<TH>D5 OE</TH>
+<TH>D5 OCT</TH>
+<TH>T11 (Postamble Gating)</TH>
+<TH>T11 (Postamble Ungating)</TH>
 </TR>
 </thead><tbody><TR >
-<TD >|square_root</TD>
-<TD >128.0 (128.0)</TD>
-<TD >141.5 (141.5)</TD>
-<TD >13.5 (13.5)</TD>
-<TD >0.0 (0.0)</TD>
-<TD >0.0 (0.0)</TD>
-<TD >185 (185)</TD>
-<TD >209 (209)</TD>
-<TD >0 (0)</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >100</TD>
-<TD >0</TD>
-<TD >|square_root</TD>
-<TD >square_root</TD>
-<TD >work</TD>
+<TD >result[0]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[1]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[2]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[3]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[4]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[5]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[6]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[7]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[8]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[9]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[10]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[11]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[12]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[13]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[14]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[15]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[16]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[17]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[18]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[19]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[20]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[21]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[22]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[23]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[24]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[25]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[26]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[27]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[28]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[29]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[30]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[31]</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >finished</TD>
+<TD >Output</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >clk</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(0) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >reset</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >start</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[63]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[61]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[62]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[59]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[60]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[57]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(1) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[58]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[55]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[56]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[53]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[54]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[51]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[52]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[49]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[50]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[47]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[48]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[45]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(2) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[46]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[43]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(2) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[44]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[41]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[42]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[39]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[40]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[37]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(2) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[38]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[35]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[36]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[33]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[34]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[31]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[32]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[29]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[30]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[27]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[28]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[25]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[26]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[23]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[24]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[21]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[22]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[19]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[20]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[17]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[18]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[15]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[16]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[13]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[14]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(7) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[11]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(2) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[12]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(7) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[9]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[10]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[7]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[8]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[5]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[6]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[3]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(1) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[4]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >(3) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[1]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(5) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[2]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >A[0]</TD>
+<TD >Input</TD>
+<TD >--</TD>
+<TD >(6) </TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
+<TD >--</TD>
 </TR>
 </tbody></TABLE>
 

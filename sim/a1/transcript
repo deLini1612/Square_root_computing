@@ -11,7 +11,7 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # QuestaSim-64 vcom 2023.2_1 Compiler 2023.05 May 12 2023
-# Start time: 08:31:23 on Dec 27,2024
+# Start time: 22:08:43 on Dec 27,2024
 # vcom -work work -explicit -vopt /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -19,11 +19,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity square_root
 # -- Compiling architecture sequence_arc of square_root
-# ** Warning: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a1.vhd(41): (vcom-1048) Non-locally static choice (association #1, choice #1) is allowed only if it is the only choice of the only association.
-# End time: 08:31:23 on Dec 27,2024, Elapsed time: 0:00:00
+# ** Warning: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a1.vhd(42): (vcom-1048) Non-locally static choice (association #1, choice #1) is allowed only if it is the only choice of the only association.
+# End time: 22:08:43 on Dec 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # QuestaSim-64 vcom 2023.2_1 Compiler 2023.05 May 12 2023
-# Start time: 08:31:23 on Dec 27,2024
+# Start time: 22:08:43 on Dec 27,2024
 # vcom -work work -explicit -vopt /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -32,11 +32,11 @@
 # -- Compiling entity tb_square_root
 # -- Compiling architecture sequence_tb of tb_square_root
 # -- Loading entity square_root
-# End time: 08:31:23 on Dec 27,2024, Elapsed time: 0:00:00
+# End time: 22:08:43 on Dec 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" -c -wlf a1.wlf work.tb_square_root 
-# Start time: 08:31:23 on Dec 27,2024
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# vsim -c -wlf a1.wlf work.tb_square_root 
+# Start time: 22:08:43 on Dec 27,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
 # //  Questa Sim-64
 # //  Version 2023.2_1 linux_x86_64 May 12 2023
 # //
@@ -56,10 +56,7 @@
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading work.tb_square_root(sequence_tb)#1
-# Loading work.square_root(sequence_arc)#1
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt
 # ** Note: Simulation completed: Accuracy = 50/50
-#    Time: 6450 ns  Iteration: 1  Instance: /tb_square_root
-# End time: 08:31:24 on Dec 27,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+#    Time: 6530 ns  Iteration: 1  Instance: /tb_square_root
+# End time: 22:08:43 on Dec 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2

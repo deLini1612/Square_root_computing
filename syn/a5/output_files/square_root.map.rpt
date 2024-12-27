@@ -1,5 +1,5 @@
 Analysis & Synthesis report for square_root
-Fri Dec 27 08:37:11 2024
+Fri Dec 27 22:43:22 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
 
 
@@ -15,12 +15,11 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |square_root|state
   9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |square_root
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |square_root
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -47,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Dec 27 08:37:11 2024           ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec 27 22:43:22 2024           ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Standard Edition ;
 ; Revision Name                   ; square_root                                     ;
 ; Top-level Entity Name           ; square_root                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 199                                             ;
+; Total registers                 ; 198                                             ;
 ; Total pins                      ; 100                                             ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -167,7 +166,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -185,25 +185,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 137       ;
+; Estimate of Logic utilization (ALMs needed) ; 115       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 184       ;
+; Combinational ALUT usage for logic          ; 119       ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 9         ;
-;     -- 5 input functions                    ; 1         ;
-;     -- 4 input functions                    ; 32        ;
-;     -- <=3 input functions                  ; 142       ;
+;     -- 6 input functions                    ; 6         ;
+;     -- 5 input functions                    ; 3         ;
+;     -- 4 input functions                    ; 1         ;
+;     -- <=3 input functions                  ; 109       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 199       ;
+; Dedicated logic registers                   ; 198       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 100       ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 199       ;
-; Total fan-out                               ; 1356      ;
-; Average fan-out                             ; 2.33      ;
+; Maximum fan-out                             ; 198       ;
+; Total fan-out                               ; 1257      ;
+; Average fan-out                             ; 2.43      ;
 +---------------------------------------------+-----------+
 
 
@@ -212,22 +212,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |square_root               ; 184 (184)           ; 199 (199)                 ; 0                 ; 0          ; 100  ; 0            ; |square_root        ; square_root ; work         ;
+; |square_root               ; 119 (119)           ; 198 (198)                 ; 0                 ; 0          ; 100  ; 0            ; |square_root        ; square_root ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------+
-; State Machine - |square_root|state                             ;
-+------------+------------+------------+------------+------------+
-; Name       ; state.DONE ; state.COMP ; state.INIT ; state.IDLE ;
-+------------+------------+------------+------------+------------+
-; state.IDLE ; 0          ; 0          ; 0          ; 0          ;
-; state.INIT ; 0          ; 0          ; 1          ; 1          ;
-; state.COMP ; 0          ; 1          ; 0          ; 1          ;
-; state.DONE ; 1          ; 0          ; 0          ; 1          ;
-+------------+------------+------------+------------+------------+
++---------------------------------------------------+
+; State Machine - |square_root|state                ;
++------------+------------+------------+------------+
+; Name       ; state.DONE ; state.COMP ; state.IDLE ;
++------------+------------+------------+------------+
+; state.IDLE ; 0          ; 0          ; 0          ;
+; state.COMP ; 0          ; 1          ; 1          ;
+; state.DONE ; 1          ; 0          ; 1          ;
++------------+------------+------------+------------+
 
 
 +------------------------------------------------------+
@@ -235,25 +234,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 199   ;
-; Number of registers using Synchronous Clear  ; 65    ;
+; Total registers                              ; 198   ;
+; Number of registers using Synchronous Clear  ; 96    ;
 ; Number of registers using Synchronous Load   ; 62    ;
-; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Clear ; 69    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Clock Enable       ; 65    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; cnt[31]                                ; 3       ;
-; cnt[0]                                 ; 4       ;
-; Total number of inverted registers = 2 ;         ;
-+----------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -261,8 +249,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |square_root|\calculation:R[11] ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |square_root|Selector3          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |square_root|\calculation:R[12] ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 0 LEs                ; 93 LEs                 ; Yes        ; |square_root|cnt[17]            ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |square_root|Selector2          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
@@ -281,27 +270,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 199                         ;
-;     CLR               ; 5                           ;
-;     ENA               ; 64                          ;
+; arriav_ff             ; 198                         ;
+;     CLR               ; 4                           ;
+;     ENA CLR           ; 34                          ;
+;     ENA CLR SCLR      ; 31                          ;
 ;     SCLR              ; 65                          ;
 ;     SLD               ; 62                          ;
-;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 184                         ;
-;     arith             ; 100                         ;
-;         1 data inputs ; 34                          ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 119                         ;
+;     arith             ; 68                          ;
+;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 66                          ;
-;     normal            ; 84                          ;
+;     normal            ; 51                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 34                          ;
-;         4 data inputs ; 32                          ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 9                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 38                          ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 3                           ;
+;         6 data inputs ; 6                           ;
 ; boundary_port         ; 100                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.30                        ;
-; Average LUT depth     ; 3.08                        ;
+; Average LUT depth     ; 2.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -320,7 +310,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
-    Info: Processing started: Fri Dec 27 08:37:03 2024
+    Info: Processing started: Fri Dec 27 22:43:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off syn_a5 -c square_root
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -331,14 +321,14 @@ Info (12127): Elaborating entity "square_root" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 411 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 378 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 311 logic cells
+    Info (21061): Implemented 278 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 553 megabytes
-    Info: Processing ended: Fri Dec 27 08:37:12 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 584 megabytes
+    Info: Processing ended: Fri Dec 27 22:43:23 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:16
 
 

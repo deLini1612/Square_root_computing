@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Dec 27 08:37:32 2024
+Fitter Status : Successful - Fri Dec 27 22:43:51 2024
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Standard Edition
 Revision Name : square_root
 Top-level Entity Name : square_root
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 128 / 56,480 ( < 1 % )
-Total registers : 209
+Logic utilization (in ALMs) : 95 / 56,480 ( < 1 % )
+Total registers : 214
 Total pins : 100 / 268 ( 37 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )

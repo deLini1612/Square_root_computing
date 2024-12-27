@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML><HEAD>
-<TITLE>Fitter Summary</TITLE>
+<TITLE>Fitter Settings</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -16,7 +16,269 @@
 </HEAD>
 
 <BODY>
-<TABLE class="report_summary_table"><tr><td>Fitter Status</td><td>Successful - Fri Dec 27 08:37:32 2024</td></tr><tr><td>Quartus Prime Version</td><td>21.1.1 Build 850 06/23/2022 SJ Standard Edition</td></tr><tr><td>Revision Name</td><td>square_root</td></tr><tr><td>Top-level Entity Name</td><td>square_root</td></tr><tr><td>Family</td><td>Cyclone V</td></tr><tr><td>Device</td><td>5CGXFC7C7F23C8</td></tr><tr><td>Timing Models</td><td>Final</td></tr><tr><td>Logic utilization (in ALMs)</td><td>128 / 56,480 ( &lt; 1 % )</td></tr><tr><td>Total registers</td><td>209</td></tr><tr><td>Total pins</td><td>100 / 268 ( 37 % )</td></tr><tr><td>Total virtual pins</td><td>0</td></tr><tr><td>Total block memory bits</td><td>0 / 7,024,640 ( 0 % )</td></tr><tr><td>Total RAM Blocks</td><td>0 / 686 ( 0 % )</td></tr><tr><td>Total DSP Blocks</td><td>0 / 156 ( 0 % )</td></tr><tr><td>Total HSSI RX PCSs</td><td>0 / 6 ( 0 % )</td></tr><tr><td>Total HSSI PMA RX Deserializers</td><td>0 / 6 ( 0 % )</td></tr><tr><td>Total HSSI TX PCSs</td><td>0 / 6 ( 0 % )</td></tr><tr><td>Total HSSI PMA TX Serializers</td><td>0 / 6 ( 0 % )</td></tr><tr><td>Total PLLs</td><td>0 / 13 ( 0 % )</td></tr><tr><td>Total DLLs</td><td>0 / 4 ( 0 % )</td></tr></TABLE>
+<TABLE>
+<thead><TR  bgcolor="#BFBFBF">
+<TH>Option</TH>
+<TH>Setting</TH>
+<TH>Default Value</TH>
+</TR>
+</thead><tbody><TR >
+<TD >Device</TD>
+<TD >5CGXFC7C7F23C8</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD  style="color: #0000FF">Minimum Core Junction Temperature</TD>
+<TD  style="color: #0000FF">0</TD>
+<TD  style="color: #0000FF">&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD  style="color: #0000FF">Maximum Core Junction Temperature</TD>
+<TD  style="color: #0000FF">85</TD>
+<TD  style="color: #0000FF">&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Use smart compilation</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Enable parallel Assembler and Timing Analyzer during compilation</TD>
+<TD >On</TD>
+<TD >On</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Enable compact report table</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Router Timing Optimization Level</TD>
+<TD >Normal</TD>
+<TD >Normal</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Perform Clocking Topology Analysis During Routing</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Placement Effort Multiplier</TD>
+<TD >1.0</TD>
+<TD >1.0</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Device initialization clock source</TD>
+<TD >INIT_INTOSC</TD>
+<TD >INIT_INTOSC</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Optimize Hold Timing</TD>
+<TD >All Paths</TD>
+<TD >All Paths</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Optimize Multi-Corner Timing</TD>
+<TD >On</TD>
+<TD >On</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Auto RAM to MLAB Conversion</TD>
+<TD >On</TD>
+<TD >On</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Equivalent RAM and MLAB Power Up</TD>
+<TD >Auto</TD>
+<TD >Auto</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Equivalent RAM and MLAB Paused Read Capabilities</TD>
+<TD >Care</TD>
+<TD >Care</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Power Optimization During Fitting</TD>
+<TD >Normal compilation</TD>
+<TD >Normal compilation</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >SSN Optimization</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Optimize Timing</TD>
+<TD >Normal compilation</TD>
+<TD >Normal compilation</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Optimize Timing for ECOs</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Regenerate Full Fit Report During ECO Compiles</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Optimize IOC Register Placement for Timing</TD>
+<TD >Normal</TD>
+<TD >Normal</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Final Placement Optimizations</TD>
+<TD >Automatically</TD>
+<TD >Automatically</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Fitter Aggressive Routability Optimizations</TD>
+<TD >Automatically</TD>
+<TD >Automatically</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Fitter Initial Placement Seed</TD>
+<TD >1</TD>
+<TD >1</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Periphery to Core Placement and Routing Optimization</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Weak Pull-Up Resistor</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Enable Bus-Hold Circuitry</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Auto Packed Registers</TD>
+<TD >Auto</TD>
+<TD >Auto</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Auto Delay Chains</TD>
+<TD >On</TD>
+<TD >On</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Auto Delay Chains for High Fanout Input Pins</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Treat Bidirectional Pin as Output Pin</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Perform Physical Synthesis for Combinational Logic for Fitting</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Perform Physical Synthesis for Combinational Logic for Performance</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Perform Register Duplication for Performance</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Perform Register Retiming for Performance</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Perform Asynchronous Signal Pipelining</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Fitter Effort</TD>
+<TD >Auto Fit</TD>
+<TD >Auto Fit</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Physical Synthesis Effort Level</TD>
+<TD >Normal</TD>
+<TD >Normal</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Logic Cell Insertion - Logic Duplication</TD>
+<TD >Auto</TD>
+<TD >Auto</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Auto Register Duplication</TD>
+<TD >Auto</TD>
+<TD >Auto</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Auto Global Clock</TD>
+<TD >On</TD>
+<TD >On</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Auto Global Register Control Signals</TD>
+<TD >On</TD>
+<TD >On</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Reserve all unused pins</TD>
+<TD >As input tri-stated with weak pull-up</TD>
+<TD >As input tri-stated with weak pull-up</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Synchronizer Identification</TD>
+<TD >Auto</TD>
+<TD >Auto</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Enable Beneficial Skew Optimization</TD>
+<TD >On</TD>
+<TD >On</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Optimize Design for Metastability</TD>
+<TD >On</TD>
+<TD >On</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Active Serial clock source</TD>
+<TD >FREQ_100MHz</TD>
+<TD >FREQ_100MHz</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Force Fitter to Avoid Periphery Placement Warnings</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Clamping Diode</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Enable input tri-state on active configuration pins in user mode</TD>
+<TD >Off</TD>
+<TD >Off</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Advanced Physical Optimization</TD>
+<TD >On</TD>
+<TD >On</TD>
+</TR>
+</tbody></TABLE>
+
 <noscript>JavaScript must be enabled to view the report.</noscript>
 </BODY>
 </HTML>

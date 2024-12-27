@@ -34,7 +34,7 @@ foreach file $desgin_files {
 }
 vcom -work work -explicit -vopt "$src_dir/$testbench_file"
 
-vsim -voptargs=+acc -c -wlf "$arch_name.wlf" work.tb_square_root
+vsim  -c -wlf "$arch_name.wlf" work.tb_square_root
 
 if {$arch_name ne "a3"} {
     add wave -position end  sim:/tb_square_root/clk
@@ -46,6 +46,6 @@ if {$arch_name ne "a3"} {
 add wave -position end  sim:/tb_square_root/A
 add wave -position end  sim:/tb_square_root/result
 
-restart
+# restart
 run -all
 exit

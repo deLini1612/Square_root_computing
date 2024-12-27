@@ -1,5 +1,5 @@
 Analysis & Synthesis report for square_root
-Fri Dec 27 08:32:20 2024
+Fri Dec 27 22:49:15 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Dec 27 08:32:20 2024           ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec 27 22:49:15 2024           ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Standard Edition ;
 ; Revision Name                   ; square_root                                     ;
 ; Top-level Entity Name           ; square_root                                     ;
@@ -169,7 +169,7 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
+;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
@@ -200,14 +200,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 1965  ;
+; Estimate of Logic utilization (ALMs needed) ; 1964  ;
 ;                                             ;       ;
-; Combinational ALUT usage for logic          ; 3900  ;
+; Combinational ALUT usage for logic          ; 3898  ;
 ;     -- 7 input functions                    ; 1     ;
 ;     -- 6 input functions                    ; 25    ;
 ;     -- 5 input functions                    ; 997   ;
 ;     -- 4 input functions                    ; 1536  ;
-;     -- <=3 input functions                  ; 1341  ;
+;     -- <=3 input functions                  ; 1339  ;
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 69    ;
 ;                                             ;       ;
@@ -217,8 +217,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Maximum fan-out node                        ; x[31] ;
 ; Maximum fan-out                             ; 118   ;
-; Total fan-out                               ; 15891 ;
-; Average fan-out                             ; 3.81  ;
+; Total fan-out                               ; 15919 ;
+; Average fan-out                             ; 3.82  ;
 +---------------------------------------------+-------+
 
 
@@ -227,7 +227,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Entity Name         ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |square_root                           ; 3900 (100)          ; 69 (69)                   ; 0                 ; 0          ; 100  ; 0            ; |square_root                                                                                                 ; square_root         ; work         ;
+; |square_root                           ; 3898 (98)           ; 69 (69)                   ; 0                 ; 0          ; 100  ; 0            ; |square_root                                                                                                 ; square_root         ; work         ;
 ;    |lpm_divide:Div0|                   ; 3800 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |square_root|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;       |lpm_divide_9dm:auto_generated|  ; 3800 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |square_root|lpm_divide:Div0|lpm_divide_9dm:auto_generated                                                   ; lpm_divide_9dm      ; work         ;
 ;          |sign_div_unsign_fnh:divider| ; 3800 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |square_root|lpm_divide:Div0|lpm_divide_9dm:auto_generated|sign_div_unsign_fnh:divider                       ; sign_div_unsign_fnh ; work         ;
@@ -267,9 +267,9 @@ Encoding Type:  One-Hot
 ; Total registers                              ; 69    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Clear ; 37    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Clock Enable       ; 65    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -322,9 +322,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 69                          ;
-;     CLR               ; 5                           ;
-;     ENA               ; 64                          ;
-; arriav_lcell_comb     ; 3900                        ;
+;     CLR               ; 4                           ;
+;     ENA               ; 32                          ;
+;     ENA CLR           ; 33                          ;
+; arriav_lcell_comb     ; 3898                        ;
 ;     arith             ; 1764                        ;
 ;         0 data inputs ; 122                         ;
 ;         1 data inputs ; 1                           ;
@@ -333,9 +334,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 941                         ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 2126                        ;
-;         2 data inputs ; 993                         ;
-;         3 data inputs ; 126                         ;
+;     normal            ; 2124                        ;
+;         2 data inputs ; 992                         ;
+;         3 data inputs ; 125                         ;
 ;         4 data inputs ; 926                         ;
 ;         5 data inputs ; 56                          ;
 ;         6 data inputs ; 25                          ;
@@ -346,7 +347,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 100                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 234.00                      ;
-; Average LUT depth     ; 225.06                      ;
+; Average LUT depth     ; 225.14                      ;
 +-----------------------+-----------------------------+
 
 
@@ -365,7 +366,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
-    Info: Processing started: Fri Dec 27 08:32:05 2024
+    Info: Processing started: Fri Dec 27 22:49:00 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off syn_a1 -c square_root
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -374,9 +375,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file /cal/ex
     Info (12023): Found entity 1: square_root File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a1.vhd Line: 5
 Info (12127): Elaborating entity "square_root" for the top level hierarchy
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a1.vhd Line: 46
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a1.vhd Line: 46
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a1.vhd Line: 46
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a1.vhd Line: 47
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a1.vhd Line: 47
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a1.vhd Line: 47
     Info (12134): Parameter "LPM_WIDTHN" = "64"
     Info (12134): Parameter "LPM_WIDTHD" = "33"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -390,13 +391,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4032 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4031 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 3932 logic cells
+    Info (21061): Implemented 3931 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 584 megabytes
-    Info: Processing ended: Fri Dec 27 08:32:21 2024
+    Info: Peak virtual memory: 575 megabytes
+    Info: Processing ended: Fri Dec 27 22:49:16 2024
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:21
 
