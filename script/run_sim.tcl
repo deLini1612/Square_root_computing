@@ -30,9 +30,9 @@ vlib $library_name
 
 # Compile all files in the project
 foreach file $desgin_files {
-    vcom -work work -2008 -explicit -vopt "$src_dir/$file"
+    vcom -work work -explicit -vopt "$src_dir/$file"
 }
-vcom -work work -2008 -explicit -vopt "$src_dir/$testbench_file"
+vcom -work work -explicit -vopt "$src_dir/$testbench_file"
 
 vsim -voptargs=+acc -c -wlf "$arch_name.wlf" work.tb_square_root
 

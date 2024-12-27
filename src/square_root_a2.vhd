@@ -1,8 +1,8 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
-use IEEE.numeric_std.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-ENTITY square_root IS
+entity square_root is
 generic (
 		n           : integer := 32
 		);
@@ -13,7 +13,7 @@ port (
         result              :   out 	std_logic_vector(n-1 downto 0);
 		finished		    :	out		std_logic
 		);
-END square_root;
+end square_root;
 
 architecture sequence_arc of square_root is
     type statetype is (IDLE, INIT, COMP, DONE);

@@ -1,13 +1,13 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
-use IEEE.numeric_std.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
-ENTITY square_root IS
+entity square_root is
 generic (n           : integer := 32);
 port (
       	A    		        : 	in 		std_logic_vector(2*n-1 downto 0);
         result              :   out 	std_logic_vector(n-1 downto 0));
-END square_root;
+end square_root;
 
 architecture combination_arc of square_root is
     begin

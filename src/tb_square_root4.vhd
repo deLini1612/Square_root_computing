@@ -134,41 +134,37 @@ begin
             -- Direct test: golden_output is 0, 1, 22, 2345, 34567
 	    wait until finished = '1' and rising_edge(clk);
 		golden_data := std_logic_vector(to_unsigned(0,result'length));
-                if (result /= golden_data)  then
-                    report "Mismatch: DUT output = " & to_hstring(result) &
-                        ", golden output = " & to_hstring(golden_data)
+                -- Compare output
+                if (result /= golden_data) then
+                    report "Mismatch: Wrong result"
                         severity error;
                     error_count := error_count + 1;
                 end if;
 	    wait until finished = '1' and rising_edge(clk);
 		golden_data := std_logic_vector(to_unsigned(1,result'length));
                 if (result /= golden_data)  then
-                    report "Mismatch: DUT output = " & to_hstring(result) &
-                        ", golden output = " & to_hstring(golden_data)
+                    report "Mismatch: Wrong result"
                         severity error;
                     error_count := error_count + 1;
                 end if;
 	    wait until finished = '1' and rising_edge(clk);
 		golden_data := std_logic_vector(to_unsigned(22,result'length));
                 if (result /= golden_data)  then
-                    report "Mismatch: DUT output = " & to_hstring(result) &
-                        ", golden output = " & to_hstring(golden_data)
+                    report "Mismatch: Wrong result"
                         severity error;
                     error_count := error_count + 1;
                 end if;
 	    wait until finished = '1' and rising_edge(clk);
 		golden_data := std_logic_vector(to_unsigned(2345,result'length));
                 if (result /= golden_data)  then
-                    report "Mismatch: DUT output = " & to_hstring(result) &
-                        ", golden output = " & to_hstring(golden_data)
+                    report "Mismatch: Wrong result"
                         severity error;
                     error_count := error_count + 1;
                 end if;
 	    wait until finished = '1' and rising_edge(clk);
 		golden_data := std_logic_vector(to_unsigned(34567,result'length));
                 if (result /= golden_data)  then
-                    report "Mismatch: DUT output = " & to_hstring(result) &
-                        ", golden output = " & to_hstring(golden_data)
+                    report "Mismatch: Wrong result"
                         severity error;
                     error_count := error_count + 1;
                 end if;
@@ -183,8 +179,7 @@ begin
                 wait until finished = '1' and rising_edge(clk);
                 -- Compare output
                  if (result /= golden_data)  then
-                    report "Mismatch: DUT output = " & to_hstring(result) &
-                        ", golden output = " & to_hstring(golden_data)
+                    report "Mismatch: Wrong result"
                         severity error;
                     error_count := error_count + 1;
                 end if;

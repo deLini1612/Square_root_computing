@@ -141,9 +141,7 @@ begin
 
                 -- Compare output
                 if result /= golden_data then
-                    report "Mismatch: Input = " & to_hstring(A) & 
-                        ", DUT output = " & to_hstring(result) &
-                        ", golden output = " & to_hstring(golden_data)
+                    report "Mismatch: Wrong result"
                         severity error;
                     error_count := error_count + 1;
                 end if;

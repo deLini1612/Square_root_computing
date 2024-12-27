@@ -11,19 +11,19 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # QuestaSim-64 vcom 2023.2_1 Compiler 2023.05 May 12 2023
-# Start time: 14:50:56 on Dec 26,2024
-# vcom -work work -2008 -explicit -vopt /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a4.vhd 
+# Start time: 05:26:05 on Dec 27,2024
+# vcom -work work -explicit -vopt /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a4.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity square_root
 # -- Compiling architecture pipeline_arc of square_root
-# End time: 14:50:56 on Dec 26,2024, Elapsed time: 0:00:00
+# End time: 05:26:05 on Dec 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 2023.2_1 Compiler 2023.05 May 12 2023
-# Start time: 14:50:57 on Dec 26,2024
-# vcom -work work -2008 -explicit -vopt /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root4.vhd 
+# Start time: 05:26:05 on Dec 27,2024
+# vcom -work work -explicit -vopt /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root4.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -31,11 +31,13 @@
 # -- Compiling entity tb_square_root
 # -- Compiling architecture pipeline_tb of tb_square_root
 # -- Loading entity square_root
-# End time: 14:50:57 on Dec 26,2024, Elapsed time: 0:00:00
+# End time: 05:26:05 on Dec 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" -c -wlf a4.wlf work.tb_square_root 
-# Start time: 14:50:57 on Dec 26,2024
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 05:26:05 on Dec 27,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # //  Questa Sim-64
 # //  Version 2023.2_1 linux_x86_64 May 12 2023
 # //
@@ -58,9 +60,10 @@
 # Loading work.square_root(pipeline_arc)#1
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # ** Note: Feed all input patterns to DUT. Number of testcases = 50
 #    Time: 510 ns  Iteration: 1  Instance: /tb_square_root
 # ** Note: Simulation completed: Accuracy = 50/50
 #    Time: 850 ns  Iteration: 1  Instance: /tb_square_root
-# End time: 14:50:57 on Dec 26,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 05:26:06 on Dec 27,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

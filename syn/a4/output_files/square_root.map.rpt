@@ -1,5 +1,5 @@
 Analysis & Synthesis report for square_root
-Thu Dec 26 15:08:03 2024
+Fri Dec 27 05:29:41 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 26 15:08:03 2024           ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec 27 05:29:41 2024           ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Standard Edition ;
 ; Revision Name                   ; square_root                                     ;
 ; Top-level Entity Name           ; square_root                                     ;
@@ -174,8 +174,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
 ;     Processor 9            ;   0.0%      ;
-;     Processor 10           ;   0.0%      ;
-;     Processors 11-12       ;   0.0%      ;
+;     Processors 10-12       ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -1121,7 +1120,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
-    Info: Processing started: Thu Dec 26 15:07:54 2024
+    Info: Processing started: Fri Dec 27 05:29:33 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off syn_a4 -c square_root
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1137,9 +1136,9 @@ Info (21057): Implemented 4496 device resources after synthesis - the final reso
     Info (21059): Implemented 33 output pins
     Info (21061): Implemented 4396 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 593 megabytes
-    Info: Processing ended: Thu Dec 26 15:08:03 2024
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 576 megabytes
+    Info: Processing ended: Fri Dec 27 05:29:41 2024
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:16
 
 

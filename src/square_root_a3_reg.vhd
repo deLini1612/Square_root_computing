@@ -1,8 +1,8 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
-use IEEE.numeric_std.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-ENTITY square_root_reg IS
+entity square_root_reg is
 generic (
 		n           : integer := 32
 		);
@@ -11,7 +11,7 @@ port (
       	A    		        : 	in 		std_logic_vector(2*n-1 downto 0);
         result              :   out 	std_logic_vector(n-1 downto 0)
 		);
-END square_root_reg;
+end square_root_reg;
 
 architecture add_reg_arc of square_root_reg is
     signal result_D     : std_logic_vector(n-1 downto 0);

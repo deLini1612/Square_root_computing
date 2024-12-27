@@ -1,16 +1,8 @@
 m255
 K4
 z2
-Z0 !s12c _opt
-Z1 !s99 nomlopt
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
+!s12c _opt
+Z0 !s99 nomlopt
 !s11e vcom 2023.2_1 2023.05, May 12 2023
 13
 !s112 1.1
@@ -18,13 +10,13 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 d/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/sim/a2
+Z1 d/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/sim/a2
 T_opt
-!s110 1735216876
-VNf^4Q<KdXciY:G?_cY?3Z0
+Z2 !s110 1735273560
+Vbi`>nZ`TK3TT9V]Mz^aeZ0
 04 14 11 work tb_square_root sequence_tb 1
-=1-000ae431a4f1-676d4eeb-c08fb-61695
-R1
+=1-000ae431a4f1-676e2c58-85fe1-1106ba
+R0
 !s12b OEM100
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
@@ -36,130 +28,85 @@ Z3 w1735216826
 Z4 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
 Z5 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
 Z6 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
-!i122 20
-R2
+!i122 0
+R1
 Z7 8/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a2.vhd
 Z8 F/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a2.vhd
 l0
 L5 1
-V@AMS@4d]OLHjEA66F6i5W2
+VSVRjF:;[TdI]S0ak<Hnkj1
 !s100 mTPneQ=:034=gZGn2kigg0
 Z9 OL;C;2023.2_1;77
-33
-Z10 !s110 1735216875
+32
+R2
 !i10b 1
-Z11 !s108 1735216875.000000
-Z12 !s90 -work|work|-2008|-explicit|-vopt|/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a2.vhd|
-Z13 !s107 /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a2.vhd|
+Z10 !s108 1735273560.000000
+Z11 !s90 -work|work|-explicit|-vopt|/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a2.vhd|
+Z12 !s107 /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/square_root_a2.vhd|
 !i113 0
-Z14 o-work work -2008 -explicit
-Z15 tExplicit 1 CvgOpt 0
+Z13 o-work work -explicit
+Z14 tExplicit 1 CvgOpt 0
 Asequence_arc
 R4
 R5
 R6
-Z16 DEx4 work 11 square_root 0 22 @AMS@4d]OLHjEA66F6i5W2
-!i122 20
-l22
-Z17 L18 58
-Vk3]e>4Ca_I75FUcgck>fd2
-!s100 2DUnOEZDQ0i=CVh_gfR_U2
-R9
-33
-R10
-!i10b 1
-R11
-R12
-R13
-!i113 0
-R14
-R15
-Aa2
-R4
-R5
-R6
-R16
+Z15 DEx4 work 11 square_root 0 22 SVRjF:;[TdI]S0ak<Hnkj1
 !i122 0
 l22
-R17
-V`8Qe`G3A5i85HX]XZ8obV0
-!s100 n3NRX8[fm622lmMcEHh;I1
+L18 58
+VLZ_`R5hK3m`iccm<X737o1
+!s100 2DUnOEZDQ0i=CVh_gfR_U2
 R9
-33
-Z18 !s110 1735186318
+32
+R2
 !i10b 1
-Z19 !s108 1735186318.000000
+R10
+R11
 R12
-R13
 !i113 0
+R13
 R14
-R15
-w1735186309
 Etb_square_root
-Z20 w1735216874
+Z16 w1735273559
 R4
 R5
 R6
-!i122 21
-R2
-Z21 8/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhd
-Z22 F/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhd
+!i122 1
+R1
+Z17 8/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhd
+Z18 F/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhd
 l0
 L8 1
-VG3>H@BS1ZMekO0:oBVdAR3
+V6KH<IPJ6VHS1Kn>z`^BI]1
 !s100 ?P=L<Z[1J]HL;moGiOLdj1
 R9
-33
-R10
+32
+R2
 !i10b 1
-R11
-Z23 !s90 -work|work|-2008|-explicit|-vopt|/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhd|
-Z24 !s107 /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhd|
+R10
+Z19 !s90 -work|work|-explicit|-vopt|/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhd|
+Z20 !s107 /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhd|
 !i113 0
+R13
 R14
-R15
 Asequence_tb
-R16
-R4
-R5
-R6
-Z25 DEx4 work 14 tb_square_root 0 22 G3>H@BS1ZMekO0:oBVdAR3
-!i122 21
-l51
-L11 152
-V1Z9d0k<4cAdkW6;F]HL:P3
-!s100 LD5EmiRF=YHa4lS_zN<oh1
-R9
-33
-R10
-!i10b 1
-R11
-R23
-R24
-!i113 0
-R14
 R15
-Asequence_arc
-R16
 R4
 R5
 R6
-R25
+DEx4 work 14 tb_square_root 0 22 6KH<IPJ6VHS1Kn>z`^BI]1
 !i122 1
-l52
-L11 153
-V>0V5<JBBOj1=GTdgU?K[P2
-!s100 fCSX;Ihhg]VnQgERK32P<2
+l51
+L11 150
+V51CES844>A=J2;W1^Ui021
+!s100 R=H6YMN862;<JUoW1ga;h1
 R9
-33
-R18
+32
+R2
 !i10b 1
+R10
 R19
-!s90 -work|work|-2008|-explicit|-vopt|/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhdl|
-!s107 /cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhdl|
+R20
 !i113 0
+R13
 R14
-R15
-w1735186317
-F/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhdl
-8/cal/exterieurs/pnguyen-24/Desktop/ADE/Square_root_computing/src/tb_square_root1.vhdl
