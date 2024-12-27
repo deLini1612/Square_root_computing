@@ -1,0 +1,959 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD>
+<TITLE>Fitter Netlist Optimizations</TITLE>
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui/1.10.2/css/smoothness/jquery-ui-1.10.2.custom.min.css">
+<link rel="stylesheet" type="text/css" href="jquery-layout/1.3.0.rc30.79/jquery.layout-1.3.0.rc30.79.css">
+<link rel="stylesheet" type="text/css" href="css/override.css">
+
+<script type="text/javascript" src="jquery/1.11.3/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="jquery-ui/1.10.2/js/jquery-ui-1.10.2.custom.min.js"></script>
+<script type="text/javascript" src="jquery-layout/1.3.0.rc30.79/jquery.layout-1.3.0.rc30.79.min.js"></script>
+
+
+</HEAD>
+
+<BODY>
+<TABLE>
+<thead><TR  bgcolor="#BFBFBF">
+<TH>Node</TH>
+<TH>Action</TH>
+<TH>Operation</TH>
+<TH>Reason</TH>
+<TH>Node Port</TH>
+<TH>Node Port Name</TH>
+<TH>Destination Node</TH>
+<TH>Destination Port</TH>
+<TH>Destination Port Name</TH>
+</TR>
+</thead><tbody><TR >
+<TD >clk~inputCLKENA0</TD>
+<TD >Created</TD>
+<TD >Placement</TD>
+<TD >Fitter Periphery Placement</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >finished~reg0</TD>
+<TD >Duplicated</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >finished~reg0_Duplicate_1</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >finished~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >finished~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[0]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[0]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[1]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[1]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[2]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[2]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[3]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[3]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[4]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[4]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[5]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[5]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[6]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[6]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[7]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[7]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[8]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[8]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[9]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[9]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[10]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[10]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[11]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[11]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[12]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[12]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[13]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[13]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[14]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[14]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[15]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[15]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[16]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[16]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[17]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[17]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[18]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[18]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[19]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[19]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[20]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[20]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[21]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[21]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[22]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[22]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[23]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[23]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[24]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[24]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[25]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[25]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[26]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[26]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[27]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[27]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[28]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[28]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[29]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[29]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[30]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[30]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >result[31]~reg0</TD>
+<TD >Packed Register</TD>
+<TD >Register Packing</TD>
+<TD >Timing optimization</TD>
+<TD >Q</TD>
+<TD >&nbsp;</TD>
+<TD >result[31]~output</TD>
+<TD >I</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >R[1]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >R[1]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >R[2]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >R[2]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >R[3]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >R[3]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >R[4]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >R[4]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >R[5]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >R[5]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >R[9]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >R[9]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >R[17]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >R[17]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >R[18]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >R[18]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >R[21]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >R[21]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >R[33]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >R[33]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[0]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[0]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[2]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[2]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[4]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[4]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[6]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[6]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[7]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[7]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[8]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[8]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[9]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[9]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[11]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[11]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[16]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[16]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[20]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[20]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[22]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[22]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[23]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[23]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Z[24]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >Z[24]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[0]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[0]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[2]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[2]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[5]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[5]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[6]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[6]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[7]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[7]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[8]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[8]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[10]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[10]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[11]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[11]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[12]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[12]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[13]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[13]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[14]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[14]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[15]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[15]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[16]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[16]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[17]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[17]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[18]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[18]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[19]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[19]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[20]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[20]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[21]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[21]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[22]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[22]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[24]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[24]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[26]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[26]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[27]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[27]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[28]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[28]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[30]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[30]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cnt[31]</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >cnt[31]~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >state.DONE</TD>
+<TD >Duplicated</TD>
+<TD >Router Logic Cell Insertion and Logic Duplication</TD>
+<TD >Routability optimization</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >state.DONE~DUPLICATE</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody></TABLE>
+
+<noscript>JavaScript must be enabled to view the report.</noscript>
+</BODY>
+</HTML>

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD>
+<TITLE>Fitter Resource Utilization by Entity</TITLE>
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui/1.10.2/css/smoothness/jquery-ui-1.10.2.custom.min.css">
+<link rel="stylesheet" type="text/css" href="jquery-layout/1.3.0.rc30.79/jquery.layout-1.3.0.rc30.79.css">
+<link rel="stylesheet" type="text/css" href="css/override.css">
+
+<script type="text/javascript" src="jquery/1.11.3/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="jquery-ui/1.10.2/js/jquery-ui-1.10.2.custom.min.js"></script>
+<script type="text/javascript" src="jquery-layout/1.3.0.rc30.79/jquery.layout-1.3.0.rc30.79.min.js"></script>
+
+
+</HEAD>
+
+<BODY>
+<TABLE>
+<thead><TR  bgcolor="#BFBFBF">
+<TH>Compilation Hierarchy Node</TH>
+<TH>ALMs needed [=A-B+C]</TH>
+<TH>[A] ALMs used in final placement</TH>
+<TH>[B] Estimate of ALMs recoverable by dense packing</TH>
+<TH>[C] Estimate of ALMs unavailable</TH>
+<TH>ALMs used for memory</TH>
+<TH>Combinational ALUTs</TH>
+<TH>Dedicated Logic Registers</TH>
+<TH>I/O Registers</TH>
+<TH>Block Memory Bits</TH>
+<TH>M10Ks</TH>
+<TH>DSP Blocks</TH>
+<TH>Pins</TH>
+<TH>Virtual Pins</TH>
+<TH>Full Hierarchy Name</TH>
+<TH>Entity Name</TH>
+<TH>Library Name</TH>
+</TR>
+</thead><tbody><TR >
+<TD >|square_root</TD>
+<TD >2086.0 (62.6)</TD>
+<TD >1988.0 (79.2)</TD>
+<TD >23.5 (17.1)</TD>
+<TD >121.5 (0.5)</TD>
+<TD >0.0 (0.0)</TD>
+<TD >3901 (101)</TD>
+<TD >101 (101)</TD>
+<TD >0 (0)</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >100</TD>
+<TD >0</TD>
+<TD >|square_root</TD>
+<TD >square_root</TD>
+<TD >work</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;|lpm_divide:Div0|</TD>
+<TD >2023.4 (0.0)</TD>
+<TD >1908.7 (0.0)</TD>
+<TD >6.4 (0.0)</TD>
+<TD >121.0 (0.0)</TD>
+<TD >0.0 (0.0)</TD>
+<TD >3800 (0)</TD>
+<TD >0 (0)</TD>
+<TD >0 (0)</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >|square_root|lpm_divide:Div0</TD>
+<TD >lpm_divide</TD>
+<TD >work</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|lpm_divide_9dm:auto_generated|</TD>
+<TD >2023.4 (0.0)</TD>
+<TD >1908.7 (0.0)</TD>
+<TD >6.4 (0.0)</TD>
+<TD >121.0 (0.0)</TD>
+<TD >0.0 (0.0)</TD>
+<TD >3800 (0)</TD>
+<TD >0 (0)</TD>
+<TD >0 (0)</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >|square_root|lpm_divide:Div0|lpm_divide_9dm:auto_generated</TD>
+<TD >lpm_divide_9dm</TD>
+<TD >work</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|sign_div_unsign_fnh:divider|</TD>
+<TD >2023.4 (0.0)</TD>
+<TD >1908.7 (0.0)</TD>
+<TD >6.4 (0.0)</TD>
+<TD >121.0 (0.0)</TD>
+<TD >0.0 (0.0)</TD>
+<TD >3800 (0)</TD>
+<TD >0 (0)</TD>
+<TD >0 (0)</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >|square_root|lpm_divide:Div0|lpm_divide_9dm:auto_generated|sign_div_unsign_fnh:divider</TD>
+<TD >sign_div_unsign_fnh</TD>
+<TD >work</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|alt_u_div_43f:divider|</TD>
+<TD >2023.4 (2023.4)</TD>
+<TD >1908.7 (1908.7)</TD>
+<TD >6.4 (6.4)</TD>
+<TD >121.0 (121.0)</TD>
+<TD >0.0 (0.0)</TD>
+<TD >3800 (3800)</TD>
+<TD >0 (0)</TD>
+<TD >0 (0)</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >|square_root|lpm_divide:Div0|lpm_divide_9dm:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_43f:divider</TD>
+<TD >alt_u_div_43f</TD>
+<TD >work</TD>
+</TR>
+</tbody></TABLE>
+
+<noscript>JavaScript must be enabled to view the report.</noscript>
+</BODY>
+</HTML>

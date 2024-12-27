@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 -- My reg with synchronous load flag and pre-set
 entity my_reg is

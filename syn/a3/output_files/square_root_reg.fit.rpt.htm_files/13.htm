@@ -1,0 +1,399 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD>
+<TITLE>Fitter Resource Usage Summary</TITLE>
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui/1.10.2/css/smoothness/jquery-ui-1.10.2.custom.min.css">
+<link rel="stylesheet" type="text/css" href="jquery-layout/1.3.0.rc30.79/jquery.layout-1.3.0.rc30.79.css">
+<link rel="stylesheet" type="text/css" href="css/override.css">
+
+<script type="text/javascript" src="jquery/1.11.3/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="jquery-ui/1.10.2/js/jquery-ui-1.10.2.custom.min.js"></script>
+<script type="text/javascript" src="jquery-layout/1.3.0.rc30.79/jquery.layout-1.3.0.rc30.79.min.js"></script>
+
+
+</HEAD>
+
+<BODY>
+<TABLE>
+<thead><TR  bgcolor="#BFBFBF">
+<TH>Resource</TH>
+<TH>Usage</TH>
+<TH>%</TH>
+</TR>
+</thead><tbody><TR >
+<TD >Logic utilization (ALMs needed / total ALMs on device)</TD>
+<TD >1,352 / 56,480</TD>
+<TD >2 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >ALMs needed [=A-B+C]</TD>
+<TD >1,352</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;[A] ALMs used in final placement [=a+b+c+d]</TD>
+<TD >1,079 / 56,480</TD>
+<TD >2 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[a] ALMs used for LUT logic and registers</TD>
+<TD >34</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[b] ALMs used for LUT logic</TD>
+<TD >1,030</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[c] ALMs used for registers</TD>
+<TD >15</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[d] ALMs used for memory (up to half of total ALMs)</TD>
+<TD >0</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;[B] Estimate of ALMs recoverable by dense packing</TD>
+<TD >16 / 56,480</TD>
+<TD >< 1 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;[C] Estimate of ALMs unavailable [=a+b+c+d]</TD>
+<TD >289 / 56,480</TD>
+<TD >< 1 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[a] Due to location constrained logic</TD>
+<TD >0</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[b] Due to LAB-wide signal conflicts</TD>
+<TD >0</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[c] Due to LAB input limits</TD>
+<TD >289</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[d] Due to virtual I/Os</TD>
+<TD >0</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Difficulty packing design</TD>
+<TD >Low</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Total LABs:&nbsp; partially or completely used</TD>
+<TD >182 / 5,648</TD>
+<TD >3 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Logic LABs</TD>
+<TD >182</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Memory LABs (up to half of total LABs)</TD>
+<TD >0</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Combinational ALUT usage for logic</TD>
+<TD >2,126</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- 7 input functions</TD>
+<TD >0</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- 6 input functions</TD>
+<TD >0</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- 5 input functions</TD>
+<TD >170</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- 4 input functions</TD>
+<TD >705</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- <=3 input functions</TD>
+<TD >1,251</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Combinational ALUT usage for route-throughs</TD>
+<TD >12</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Dedicated logic registers</TD>
+<TD >111</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- By type:</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Primary logic registers</TD>
+<TD >96 / 112,960</TD>
+<TD >< 1 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Secondary logic registers</TD>
+<TD >15 / 112,960</TD>
+<TD >< 1 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- By function:</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Design implementation registers</TD>
+<TD >96</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Routing optimization registers</TD>
+<TD >15</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Virtual pins</TD>
+<TD >0</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >I/O pins</TD>
+<TD >97 / 268</TD>
+<TD >36 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Clock pins </TD>
+<TD >5 / 11</TD>
+<TD >45 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Dedicated input pins </TD>
+<TD >0 / 23</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >M10K blocks</TD>
+<TD >0 / 686</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Total MLAB memory bits</TD>
+<TD >0</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Total block memory bits</TD>
+<TD >0 / 7,024,640</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Total block memory implementation bits</TD>
+<TD >0 / 7,024,640</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Total DSP Blocks</TD>
+<TD >0 / 156</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Fractional PLLs</TD>
+<TD >0 / 7</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Global signals </TD>
+<TD >1</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Global clocks</TD>
+<TD >1 / 16</TD>
+<TD >6 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Quadrant clocks</TD>
+<TD >0 / 88</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;-- Horizontal periphery clocks</TD>
+<TD >0 / 18</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >SERDES Transmitters</TD>
+<TD >0 / 120</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >SERDES Receivers</TD>
+<TD >0 / 120</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >JTAGs</TD>
+<TD >0 / 1</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >ASMI blocks</TD>
+<TD >0 / 1</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >CRC blocks</TD>
+<TD >0 / 1</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Remote update blocks</TD>
+<TD >0 / 1</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Oscillator blocks</TD>
+<TD >0 / 1</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Hard IPs</TD>
+<TD >0 / 1</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Standard RX PCSs</TD>
+<TD >0 / 6</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >HSSI PMA RX Deserializers</TD>
+<TD >0 / 6</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Standard TX PCSs</TD>
+<TD >0 / 6</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >HSSI PMA TX Serializers</TD>
+<TD >0 / 6</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Channel PLLs</TD>
+<TD >0 / 6</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Impedance control blocks</TD>
+<TD >0 / 3</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Hard Memory Controllers</TD>
+<TD >0 / 2</TD>
+<TD >0 %</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Average interconnect usage (total/H/V)</TD>
+<TD >1.0% / 1.0% / 1.1%</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Peak interconnect usage (total/H/V)</TD>
+<TD >14.8% / 14.7% / 15.3%</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Maximum fan-out</TD>
+<TD >134</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Highest non-global fan-out</TD>
+<TD >134</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Total fan-out</TD>
+<TD >9173</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Average fan-out</TD>
+<TD >3.75</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody></TABLE>
+
+<noscript>JavaScript must be enabled to view the report.</noscript>
+</BODY>
+</HTML>
