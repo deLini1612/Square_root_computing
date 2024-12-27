@@ -48,9 +48,9 @@ wave%: sim%
 # View reports (view_rpt<ARC_NUM>)
 view_rpt%:
 	$(call check_valid_arch,$*)
-	@if [ -f $(SYN_DIR)/a$*/output_files/square_root.cmp.rpt.htm ]; then \
+	@if [ -f $(SYN_DIR)/a$*/output_files/*.cmp.rpt.htm ]; then \
 		echo "Opening report for architecture a$*..."; \
-		firefox $(SYN_DIR)/a$*/output_files/square_root.cmp.rpt.htm & \
+		firefox $(SYN_DIR)/a$*/output_files/*.cmp.rpt.htm & \
 	else \
 		echo "To view report, run synthesis first using 'make syn$*'"; \
 	fi
